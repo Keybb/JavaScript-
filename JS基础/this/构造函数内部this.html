@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function User(name, age, address) {
+        this.name = name;
+        this.age = age;
+        this.address = address;
+        this.addShopCar = function (product) {
+          console.log(product + "加入购物车");
+        };
+        console.log(this);
+      }
+      var u1 = new User("高小乐", 19, "北京");
+      console.log(u1);
+
+      var u2 = new User("曹操", 19, "北京");
+      console.log(u2);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 阶乘递归版
+      // function factorial(n) {
+      //   if (n <= 2) {
+      //     return n;
+      //   }
+      //   return n * factorial(n - 1);
+      // }
+      // console.log(factorial(4));
+
+      // function func(n) {
+      //   console.log(n);
+      //   if (n > 1) {
+      //     func(n - 1);
+      //   }
+      //   console.log(n);
+      // }
+      // func(3);
+
+      // 拉平数组
+      var nums = [
+        [1000, 2000, 3000],
+        "hello",
+        [[10, 20, 30], ["a", "b", ["A", "B", "C"]], "小乐"],
+        12313,
+        [101, 202, 303],
+      ];
+      function func(arr, res = []) {
+        for (var i = 0; i < arr.length; i++) {
+          if (typeof arr[i] === "object") {
+            func(arr[i], res);
+          } else {
+            console.log(arr[i]);
+            res.push(arr[i]);
+          }
+        }
+        return res;
+      }
+      var res = func(nums);
+      console.log(res);
+    </script>
+  </body>
+</html>

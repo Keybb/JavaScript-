@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var arr = ["h", "e", "l", "l", "o", [1, 2, 3]];
+      // console.log(arr[1]); // e
+      // var text = arr[0] + arr[1];
+      // console.log(text); // he
+      // console.log(arr[5][0]); // 1
+      // console.log(arr[6]); // undefined
+
+      // arr[5][0] = 120;
+      // console.log(arr[5][0]); // 120
+      // arr[6] = 250; // 添加一个新元素
+      // console.log(arr);
+
+      var arr = [12, 34, 55, 94, 181, 90];
+      var sum = 0;
+      // for (var i = 0; i < arr.length; i++) {
+      //   sum += arr[i];
+      // }
+      // console.log("sum =", sum);
+      // console.log("avg =", sum / arr.length);
+
+      var max, min;
+      max = min = arr[0];
+      for (var i = 0; i < arr.length; i++) {
+        if (arr[i] >= max) max = arr[i];
+        if (arr[i] <= min) min = arr[i];
+      }
+      console.log("min = ", min, "max =", max);
+    </script>
+  </body>
+</html>

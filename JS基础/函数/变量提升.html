@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.log(address); // undefined
+
+      var address = "上海";
+      console.log(address);
+
+      function func() {
+        console.log(num);
+        var num = 100;
+        console.log(num);
+      }
+
+      func();
+
+      // 创建全局变量
+      var count = 100;
+      var message = "What";
+      // 创建函数
+      function fn() {
+        console.log(count); // undefined
+        console.log(message); // What
+
+        var count = 200;
+        message = "Where"; //
+
+        console.log(count); // 200
+        console.log(message); // Where
+      }
+      // 调用函数
+      fn();
+      // 输出变量
+      console.log(count); // 100
+      console.log(message); // Where
+    </script>
+  </body>
+</html>

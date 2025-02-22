@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.log(fn01); // 输出函数本身 函数全部提升
+      fn01(); // 可以调用
+
+      console.log(fn02); // undefined
+      fn02(); // 不可以调用
+
+      function fn01() {
+        console.log("fn01:");
+      }
+
+      // 使用var关键字创建函数，不能整体提升
+      var fn02 = function () {
+        console.log("fn02");
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // var nameList = ["sd", "ee", "dfd", "iio", "kd"];
+      // nameList.forEach(function (item) {
+      //   console.log(item);
+      // });
+      // nameList.forEach((value, index, array) => {
+      //   console.log(value);
+      // });
+
+      // function func() {
+      //   var res = 100 * 2323;
+      //   return function () {
+      //     console.log(res);
+      //   };
+      // }
+      // func()();
+      // ---------------------------------------
+      // function fun01(db) {
+      //   db(100, 200);
+      // }
+      // fun01(function (a, b) {
+      //   console.log("我是回调函数:", a, b);
+      // });
+
+      // function func02(num1, num2, cb) {
+      //   return cb(num1, num2);
+      // }
+      // var res = func02(100, 200, function (a, b) {
+      //   return a - b;
+      // });
+      // console.log(res); // -100
+      // ---------------------------------------
+
+      var num = 10;
+      function fn01(fn) {
+        var num = 20;
+        fn();
+      }
+      function fn02() {
+        console.log(num);
+      }
+      fn01(fn02);
+    </script>
+  </body>
+</html>

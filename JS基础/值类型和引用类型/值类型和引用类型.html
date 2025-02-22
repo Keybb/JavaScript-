@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var obj1 = { age: 100 };
+      var obj2 = obj1;
+      obj2.age = 200;
+      console.log(obj1.age);
+
+      // 引用类型判等
+      console.log(obj1 === obj2);
+    </script>
+  </body>
+</html>

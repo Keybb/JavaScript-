@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // arr --> Array.prototype --> Object.prototype
+      var arr = [];
+      console.log(arr.constructor); // 用的是原型上的constructor方法
+      console.log(Array.prototype.constructor); // 用的是自己的constructor方法
+      // 原型上的constructor方法是给实例使用的，不是给构造函数使用的
+      console.log(Object.prototype.constructor);
+      console.log("");
+      var user = {};
+      console.log(user.constructor); // Object
+    </script>
+  </body>
+</html>

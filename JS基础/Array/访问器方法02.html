@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 定义数组
+      var users = [
+        { name: "曹操", age: 67, address: "许昌" },
+        { name: "刘备", age: 47, address: "成都" },
+        { name: "孙权", age: 37, address: "南京" },
+        { name: "吕布", age: 51, address: "包头" },
+        { name: "赵云", age: 46, address: "石家庄" },
+        { name: "诸葛亮", age: 53, address: "南阳" },
+      ];
+      console.log(users);
+      console.log("");
+
+      // forEach 无返回值
+      users.forEach(function (item, index) {
+        console.log(item, index);
+      });
+      console.log("");
+
+      // filter
+      var user1 = users.filter(function (item, index, arr) {
+        return item.age > 50; // 返回年龄大于50的元素
+      });
+      console.log(user1);
+
+      // map
+      var user2 = users.map(function (item, index, arr) {
+        return item.name; // 得到所有用户的用户名
+      });
+      var user3 = users.map(function (item, index, arr) {
+        item.age -= 10;
+        return item; // 让所有用户的年龄-10
+      });
+      console.log(user3);
+
+      // every 判断是否所有用户都是成年人
+      var res1 = users.every(function (item, index, array) {
+        return item.age > 18;
+      });
+      console.log(res1);
+      // 判断是否所有用户的名字都是两个字的
+      var res2 = users.every(function (item, index, array) {
+        return item.name.length === 2;
+      });
+      console.log(res2);
+
+      // some 判断是否有住在南京的用户
+      var res3 = users.some(function (item, index, array) {
+        return item.address === "南京";
+      });
+      console.log(res3);
+
+      // reduce() 第一个参数是回调函数 第二个参数可选
+      // reduce不写第二个参数，回调函数从第二个元素开始执行，第一个元素作为第一次调用的prev
+      users.reduce(function (prev, item, index, arr) {
+        // prev是上一次回调函数的返回值，第一次调用使用reduce的第二个参数
+        console.log(prev, item, index);
+      }, "高小乐");
+
+      // 计算所有用户的年龄和
+      var sum = users.reduce(function (prev, item) {
+        return prev + item.age;
+      }, 0);
+      console.log(sum);
+      // 省去第二个参数的情况
+      var arr = [1, 2, 3, 4, 5, 6];
+      var sum_arr = arr.reduce(function (prev, item) {
+        return prev + item;
+      });
+      console.log(sum_arr);
+
+      var sum_arr2 = arr.reduceRight(function (prev, item) {
+        console.log(prev);
+
+        return prev + item;
+      });
+      console.log(sum_arr2);
+    </script>
+  </body>
+</html>

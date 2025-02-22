@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // function func(arg1, arg2) {
+      //   console.log(arg1, arg2);
+      //   console.log(arguments[2]);
+      // }
+      // func(100, 200, "hello");
+      // for (var i = 0; i < array.length; i++) {
+      //   const element = array[i];
+
+      // }
+
+      // for (var i = 0; i <= 10; i++) {
+      //   var age = i + 10;
+      //   // i和age是全局变量
+      // }
+      // console.log(age);
+      // console.log(i);
+
+      // function func () {
+      //   var address = '上海';
+      //   age = 10;
+      //   console.log(address);
+      //   console.log(age);
+
+      // }
+      // func();
+      // console.log(age);
+
+      var username = "高小乐";
+      var userage = 100;
+      function fn() {
+        var username = "曹操";
+        username = "孙悟空";
+        userage = 200;
+        console.log(username); // 孙悟空
+        console.log(userage); // 200
+      }
+      fn();
+      console.log(username); // 高小乐
+      console.log(userage); // 200
+
+      // ---------------------
+
+      var num1 = 100;
+      var num2 = 200;
+      function fun(num1, num2) {
+        num1 *= 2;
+        num2 *= 2;
+        console.log(num1); // 200
+        console.log(num2); // 400
+      }
+      fun(num1, num2);
+      console.log(num1); // 100
+      console.log(num2); // 200
+    </script>
+  </body>
+</html>

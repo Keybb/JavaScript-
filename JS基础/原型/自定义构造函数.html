@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function User(name, age, address) {
+        this.name = name;
+        this.age = age;
+        this.address = address;
+      }
+      // 将方法添加到User的实例的原型
+      User.prototype.addShop = function (product) {
+        console.log(this.name + "将" + product + "添加购物车");
+      };
+
+      User.prototype.buy = function (product) {
+        console.log(this.name + "购买了" + product);
+      };
+
+      var u1 = new User("高小乐", 30, "上海");
+      var u2 = new User("高小小乐", 10, "北京");
+
+      u1.addShop("洗衣粉");
+      u1.buy("肥皂");
+
+      u2.addShop("方便面");
+      u2.buy("火腿肠");
+    </script>
+  </body>
+</html>

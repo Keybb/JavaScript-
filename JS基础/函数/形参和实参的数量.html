@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // function func(name1, name2) {
+      //   console.log(name1 + "和" + name2 + "跳舞");
+      // }
+
+      // func("张", "王");
+
+      // // 实参>形参，按照顺序赋值
+      // func("张", "王", "李");
+      // // 实参<形参，自动得到undefined
+      // func("张");
+
+      // es5设置形参默认值
+      function func(name1, name2) {
+        if (name2 === undefined) {
+          name2 = "李四";
+        }
+        console.log(name1 + "和" + name2 + "跳舞");
+      }
+      func("张");
+      func("张", "王");
+
+      // es6设置形参默认值
+      function func(name1, name2 = "李四") {
+        console.log(name1 + "和" + name2 + "跳舞");
+      }
+      func("张");
+      func("张", "王");
+    </script>
+  </body>
+</html>

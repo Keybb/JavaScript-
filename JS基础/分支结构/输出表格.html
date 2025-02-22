@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      table {
+        width: 800px;
+        table-layout: fixed;
+        border-collapse: collapse;
+        border: 1px solid black;
+        text-align: center;
+      }
+      td {
+        padding: 10px;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      var row = +prompt("请输入表格的行数：");
+      var col = +prompt("请输入表格的列数：");
+      document.write("<table>");
+      document.write("<tbody>");
+      for (var i = 0; i < row; i++) {
+        document.write("<tr>");
+        for (var n = 0; n < col; n++) {
+          document.write("<td>" + n + "</td>");
+        }
+        document.write("</tr>");
+      }
+      document.write("</tbody>");
+      document.write("</table>");
+    </script>
+  </body>
+</html>

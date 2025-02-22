@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var msg = "hello 高小乐666。";
+      console.log("字符串长度：", msg.length);
+      console.log("第一个字符：", msg[0]);
+      console.log("最后一个字符：", msg[msg.length - 1]);
+      for (var i = 0; i < msg.length; i++) {
+        console.log(msg[i]);
+      }
+
+      // 不具备的数组特性
+      // 不能修改某个字符
+      msg[0] = "H";
+      console.log(msg);
+      msg.length -= 5;
+      console.log(msg);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var arr = [1, 2, 3, 4, 5];
+      console.log(arr);
+
+      // 获取对象原型
+      console.log(arr.__proto__);
+
+      console.log(Array.prototype);
+      console.log(arr.__proto__ === Array.prototype);
+
+      var arr1 = [10, 20, 30, 40, 50, 60];
+      var arr2 = ["sss", "ddd"];
+      console.log(arr1.__proto__ === arr2.__proto__);
+    </script>
+  </body>
+</html>

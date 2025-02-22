@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // var username = "高小乐";
+      // var age = 100;
+      // var address = "上海";
+      // var job = "coder";
+
+      // function func01() {
+      //   // fun01作用域
+      //   var username = "孙悟空";
+      //   var age = 200;
+      //   var address = "北京";
+
+      //   function func02() {
+      //     // fun02作用域
+      //     var username = "李逵";
+      //     var age = 300;
+
+      //     function func03() {
+      //       // fun03作用域
+      //       var username = "贾宝玉";
+      //       console.log(username); // 贾宝玉
+      //       console.log(age);      // 300
+      //       console.log(address);  // 北京
+      //       console.log(job);      // coder
+      //     }
+      //     func03();
+      //   }
+      //   func02();
+      // }
+      // func01();
+
+      //-------------------------------------------
+      var age = 100;
+
+      function fn() {
+        console.log("fn: ", age);
+      }
+
+      function func() {
+        var age = 200;
+        fn(); // fn上一级是全局作用域，会在全局中查找age，而不是在func中查找
+      }
+
+      func(); // fn: 100
+    </script>
+  </body>
+</html>

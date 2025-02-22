@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function func(num01, num02) {
+        console.log("func被调用了", num01 * num02, this);
+        return num01 + num02;
+      }
+      // 形参数量
+      console.log(func.length);
+      // window调用 this指向window
+      func(10, 20);
+      // call调用func的同时可以设置里面的this
+      func.call({ name: "hhh" }, 10, 20);
+
+      func.apply("hello", [10, 30]);
+
+      // 使用forEach遍历字符串
+      var str = "hello world!";
+      [].forEach.call(str, function (item, index) {
+        console.log(item, index);
+      });
+
+      var reverse = [].reduceRight.call(str, function (prev, item) {
+        return prev + item;
+      });
+      console.log(reverse);
+
+      // bind
+      var fun01 = func.bind([10, 20, 30, 40, 50]);
+      console.log(fun01(10, 20));
+      var fun02 = func.bind([10, 20, 30], 10000);
+      console.log(fun02(2));
+    </script>
+  </body>
+</html>

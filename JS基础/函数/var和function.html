@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 先找var，再找function
+      // 创建一个address，没有值
+      // 找到function 发现已经创建好了address，直接赋值
+      // 一个作用域下只能有一个同名的变量
+      // 使用变量
+      console.log(address); // 函数本身
+
+      var address = "北京";
+
+      function address() {
+        console.log("我是函数address");
+      }
+
+      console.log(address); // 北京 执行到var时，进行赋值，会覆盖函数
+      address(); // address is not a function 此时值为北京
+    </script>
+  </body>
+</html>

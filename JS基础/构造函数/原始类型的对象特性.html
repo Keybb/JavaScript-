@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var num1 = 5; // 值的状态
+      var num2 = Number(15); // 值的状态
+      var num3 = new Number(25); // 对象的状态
+      // 无论处于什么状态，需要什么形式自动转化
+      console.log(num1 * num3);
+      console.log(num2);
+      console.log(num3);
+
+      num1.constructor; // 自动包装成对象
+
+      // 临时对象
+      var msg = "";
+      // 临时 new String(msg) 创建对象，添加address属性，用完即毁
+      msg.address = "上海";
+
+      // 又临时创建new String(msg) 读取address属性，用完即毁
+      console.log(msg.address); // undefined
+    </script>
+  </body>
+</html>

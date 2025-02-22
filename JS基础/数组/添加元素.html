@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var nameList = ["张三", "李四", "王五", "赵六"];
+      nameList[nameList.length] = "刘七";
+      console.log(nameList);
+      nameList.push("周瑜");
+      nameList.push("钱九", "孙十");
+      nameList.unshift("吴十一");
+
+      nameList.splice(6, 0, "郑");
+      console.log(nameList);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 输出当前时间
+      var d1 = new Date();
+      console.log(d1);
+
+      // 指定时间
+      var d2 = new Date("December 17, 1995 01:23:34");
+      console.log(d2);
+
+      var d3 = new Date("2008-09-12T19:20:00");
+      console.log(d3);
+
+      // 兼容性最好的写法 月份从0开始算 0代表一月
+      var d4 = new Date(2002, 9, 1, 10, 30, 12); // Tue Oct 01 2002 10:30:12
+      console.log(d4);
+
+      var d5 = new Date(2002, 9);
+      console.log(d5);
+
+      // 时间戳 1970.1.1 00:00:00 距离目标日期的毫秒数
+      var d7 = new Date(36000000000);
+      console.log(d7); // Mon Feb 22 1971 00:00:00 GMT+0800 (中国标准时间)
+
+      console.log("");
+      // 公元纪年
+      console.log(d1.getFullYear());
+      // 月
+      console.log(d1.getMonth() + 1);
+      // 星期几
+      console.log(d1.getDay());
+      // 日
+      console.log(d1.getDate());
+      // 时 分 秒 毫秒
+      console.log(d1.getHours());
+      console.log(d1.getMinutes());
+      console.log(d1.getSeconds());
+      console.log(d1.getMilliseconds());
+      // 时间戳 距离1970年的毫秒数
+      console.log(d1.getTime());
+
+      // 零时区 英国
+      console.log(d1.getUTCFullYear());
+      console.log(d1.getUTCHours());
+
+      // 修改
+      d1.setFullYear(2000, 2, 10);
+      console.log(d1);
+
+      // 获取当前的时间戳
+      console.log(Date.now());
+      // 指定日期的时间戳（零时区）
+      console.log(Date.UTC(2000, 10, 2));
+    </script>
+  </body>
+</html>

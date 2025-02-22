@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+      1. 使用 while 循环写四种形式的九九乘法表
+      2. 打印100–200之间所有能被3或者7整除的数
+      3. 打印三位数中，位上有3或者7的数字 100 ~ 999
+      4. 100 的阶乘 1*2*3....*100
+      5. 求1!+2!+3!+...+20!的值  
+      6. 求100-999之间的水仙花数。abc =a^3+b^3+c^3（水仙花数是指一个 3 位数，它的每个位上的数字的 3次幂之和等于它本身）
+      7. 用户输入一个数字，判断该数字是否是质数
+      8. 输出100-200之间所有的素数（质数）（只能被1和自身整除的数）
+    先封装一个判断某个数字是否是质数的函数
+
+      9. 控制台输出 使用*做一个等腰三角形 
+          *
+         ***
+        *****
+       *******
+      *********
+    
+     10. 页面输出 输出如下效果
+        01 02 03 04 05 06 07 08 09 10
+        11 12 13 14 15 16 17 18 19 20
+        21 22 23 24 25 26 27 28 29 30
+        31 32 33 34 35 36 37 38 39 40
+        41 42 43 44 45 46 47 48 49 50
+      */
+
+      // for (var i = 100; i <= 200; i++) {
+      //   if (i % 3 == 0 || i % 7 == 0) {
+      //     console.log(i);
+      //   }
+      // }
+
+      // for (var i = 100; i <= 999; i++) {
+      //   if (
+      //     i % 10 == 3 ||
+      //     i % 10 == 7 ||
+      //     i % 100 == 3 ||
+      //     i % 100 == 7 ||
+      //     i % 1000 == 3 ||
+      //     i % 1000 == 7
+      //   ) {
+      //     console.log(i);
+      //   }
+      // }
+      // var num = 1;
+      // for (var i = 1; i <= 100; i++) {
+      //   num *= i;
+      // }
+      // console.log(num);
+
+      // 翻转字符串
+      // var trans = function (str) {
+      //   var len = str.length;
+      //   var tranStr = "";
+      //   for (var i = 0; i < len; i++) {
+      //     tranStr += str[len - i - 1];
+      //   }
+      //   return tranStr;
+      // };
+      // console.log(trans("hello,world"));
+
+      var fun1 = function () {
+        console.log(666);
+      };
+      var res1 = fun1;
+      var res2 = fun1(); // 666
+      console.log(res1); // 函数本身
+      console.log(res2); // undefined
+      console.log(fun1()); // 666
+      // undefined
+    </script>
+  </body>
+</html>

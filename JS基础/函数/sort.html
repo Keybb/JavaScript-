@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var nums = [98, 33, 45, 23, 11, 596, 67];
+      nums.sort(function (next, prev) {
+        return next - prev; // 升序
+      });
+      console.log(nums);
+
+      nums.sort(function (next, prev) {
+        return prev - next; // 降序
+      });
+      console.log(nums);
+    </script>
+  </body>
+</html>

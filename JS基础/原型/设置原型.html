@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // var obj = {};
+      // console.log(obj);
+
+      // var obj2 = Object.create([1, 2, 3, 4]); // 括号中填写原型
+      // console.log(obj2);
+      // var obj3 = Object.create(new String("hello"));
+      // console.log(obj3);
+
+      // 创建没有原型的对象
+
+      // var obj4 = Object.create(null);
+      // console.log(obj4);
+      var arr = [1, 2, 3];
+      var obj = {};
+      console.log(arr.__proto__.__proto__ === Object.prototype);
+      console.log(arr.__proto__.__proto__ === obj.__proto__);
+      // console.log(typeof arr.__proto__);
+      console.log(Array.prototype);
+
+      // console.log(typeof Array.prototype);
+      console.log(Array.prototype.__proto__);
+      console.log(Object.prototype);
+
+      var func = function () {};
+      var f1 = new func();
+      console.log(f1.__proto__ === func.prototype);
+      console.log(Object.prototype === func.prototype.__proto__);
+    </script>
+  </body>
+</html>

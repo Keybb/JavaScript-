@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var msg = "hello world";
+      console.log(msg.length);
+
+      console.log("第五个字符：", msg.charAt(4));
+
+      console.log(msg.indexOf("o")); // 4
+      console.log(msg.indexOf("!")); // -1
+      console.log(msg.lastIndexOf("o")); // 7
+      console.log(msg.lastIndexOf("p")); // -1
+
+      console.log(msg.slice(3, 7));
+
+      console.log(msg.substring(3, 7));
+
+      console.log(msg.substr(3));
+
+      console.log(msg.split(" ")); // ['hello', 'world']
+      console.log(msg.split("")); // ['h', 'e', 'l', 'l', 'o', ' ', 'w', 'o', 'r', 'l', 'd']
+      console.log(msg.toUpperCase()); // HELLO WORLD
+      console.log(msg.toLowerCase()); // hello world
+
+      console.log(msg.charCodeAt(4)); // 111
+
+      console.log(String.fromCharCode(97));
+    </script>
+  </body>
+</html>

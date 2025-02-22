@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var nameList = [
+        "欧阳姥姥",
+        "司马姥姥",
+        "独孤姥姥",
+        "令狐姥姥",
+        "东方姥姥",
+        "西门姥姥",
+        "诸葛姥姥",
+      ];
+      var new_length = nameList.push("爱新觉罗姥姥");
+      console.log(nameList, new_length);
+
+      console.log(nameList.splice(2, 1, "刘姥姥", "牛姥姥")); // ['独孤姥姥']
+      console.log(nameList.reverse());
+    </script>
+  </body>
+</html>

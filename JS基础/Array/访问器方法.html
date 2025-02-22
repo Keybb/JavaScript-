@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var nameList = [
+        "欧阳姥姥",
+        "司马姥姥",
+        "独孤姥姥",
+        "令狐姥姥",
+        "东方姥姥",
+        "西门姥姥",
+        "诸葛姥姥",
+      ];
+      // concat
+      var nums = [10, 20, 30, 40, 50];
+      console.log(nameList.concat(nums));
+      console.log(nums.concat(nameList, [1, 2, 3, 4], [7, 8, 9, 0]));
+
+      // slice
+      console.log(nameList.slice(1, 5)); // ['司马姥姥', '独孤姥姥', '令狐姥姥', '东方姥姥']
+
+      // join 合并成一个字符串 参数指定分隔符
+      console.log(nameList.join()); // 欧阳姥姥,司马姥姥,独孤姥姥,令狐姥姥,东方姥姥,西门姥姥,诸葛姥姥
+      console.log(nameList.join(";")); // 欧阳姥姥;司马姥姥;独孤姥姥;令狐姥姥;东方姥姥;西门姥姥;诸葛姥姥
+
+      // indexOf 不存在返回-1
+      console.log(nameList.indexOf("东方姥姥")); // 4
+
+      // lastIndexOf
+      console.log(nameList.lastIndexOf("刘姥姥")); // -1
+    </script>
+  </body>
+</html>

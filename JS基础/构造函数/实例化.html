@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var arr = new Array();
+      var arr3 = [];
+
+      // 自定义构造函数
+      function User(name, age, address) {
+        // 设置User实例的属性
+        this.name = name;
+        this.age = age;
+        this.address = address;
+        this.addShopCar = function (product) {
+          console.log(this.name + "将" + product + "加入购物车");
+        };
+        this.buy = function (product) {
+          console.log(this.name + "购买了" + product);
+        };
+      }
+      var u1 = new User("高小乐", 18, "上海");
+      console.log(u1);
+      u1.addShopCar("奶粉");
+
+      // 返回值对实例化的影响
+      function Product() {
+        return [1, 2, 3, 4];
+      }
+      var p = new Product();
+      console.log(p);
+    </script>
+  </body>
+</html>

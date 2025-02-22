@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var year = +prompt("请输入出生年份：");
+      if (isNaN(year) || year === "") {
+        alert("请输入正确的年份");
+      } else {
+        num = year % 12;
+        switch (num) {
+          case 0:
+            alert("猴年");
+            break;
+          case 1:
+            alert("鸡年");
+            break;
+          case 2:
+            alert("狗年");
+            break;
+          case 3:
+            alert("猪年");
+            break;
+          case 4:
+            alert("鼠年");
+            break;
+          case 5:
+            alert("牛年");
+            break;
+          case 6:
+            alert("虎年");
+            break;
+          case 7:
+            alert("兔年");
+            break;
+          case 8:
+            alert("龙年");
+            break;
+          case 9:
+            alert("蛇年");
+            break;
+          case 10:
+            alert("马年");
+            break;
+          case 11:
+            alert("羊年");
+            break;
+        }
+      }
+    </script>
+  </body>
+</html>

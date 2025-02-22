@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var msg = 'var address = "shanghai"';
+      eval(msg);
+      console.log(address);
+
+      // encodeURI
+      var url = "http://www.atguigu.com/image/小乐.html";
+      var url01 = encodeURI(url);
+      console.log(url01);
+      var url02 = decodeURI(url01);
+      console.log(url02);
+
+      // decodeURI
+    </script>
+  </body>
+</html>

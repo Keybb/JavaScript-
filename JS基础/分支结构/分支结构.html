@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // var money = prompt("请输入金额：");
+      // if (money >= 100000) {
+      //   alert("you are rich!");
+      // } else {
+      //   alert("you are poor!");
+      // }
+
+      // money >= 10000 ? alert("you are rich!") : alert("you are poor!");
+      // alert(money >= 100000 ? "you are rich!" : "you are poor!");
+      var score = prompt("请输入成绩：");
+      if (isNaN(score) || score === "") {
+        alert("重新输入！");
+      } else {
+        if (score < 60) {
+          alert("不及格");
+        } else if (score < 70) {
+          alert("成绩一般");
+        } else if (score < 80) {
+          alert("成绩良好");
+        } else if (score < 90) {
+          alert("成绩优秀");
+        } else {
+          alert("天才！");
+        }
+      }
+    </script>
+  </body>
+</html>
