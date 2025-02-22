@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrapper {
+        width: 600px;
+        padding: 20px;
+        background: #ccc;
+      }
+
+      .wrapper p {
+        padding: 20px 10px;
+        color: #fff;
+        background: #099;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>文档结果</h1>
+    <div id="box" class="wrapper">
+      <p>而不壬归病尺你文着李国颜，才专法书，收。</p>
+      <p>而不壬归病尺你文着李国颜，才专法书，收。</p>
+      <p>而不壬归病尺你文着李国颜，才专法书，收。</p>
+      <p>而不壬归病尺你文着李国颜，才专法书，收。</p>
+      <p>而不壬归病尺你文着李国颜，才专法书，收。</p>
+      <p>而不壬归病尺你文着李国颜，才专法书，收。</p>
+    </div>
+    <hr />
+
+    <script>
+      // 获取id是box的元素
+      var boxEle = document.querySelector("#box");
+
+      // 获取boxEle所有的子节点 包括换行符
+      console.log(boxEle.childNodes);
+      // 获取boxEle所有的子元素
+      console.log(boxEle.children);
+
+      console.log("boxEle的第一子元素: ", boxEle.firstElementChild);
+      console.log("boxEle的最后一子元素: ", boxEle.lastElementChild);
+      console.log("boxEle的第二个子元素: ", boxEle.children[1]);
+      // 给第三个子元素设置样式
+      boxEle.children[2].style.textDecoration = "underline #f00 wavy";
+      console.log("");
+      console.log("");
+
+      console.log("boxEle的父元素: ", boxEle.parentElement);
+      console.log(
+        "boxEle的父元素的父元素: ",
+        boxEle.parentElement.parentElement
+      );
+      console.log("");
+      console.log("");
+
+      console.log("上一个兄弟元素: ", boxEle.previousElementSibling);
+      console.log("下一个兄弟元素: ", boxEle.nextElementSibling);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>window</h1>
+    <hr />
+    <button id="btn01">打开窗口</button>
+    <button id="btn02">打开指定网页</button>
+    <button id="btn03">指定窗口打开网页</button>
+    <button id="btn04">打开窗口指定尺寸</button>
+
+    <hr />
+    <br />
+    <br />
+
+    <button id="btn05">双击关闭窗口</button>
+    <!-- <iframe
+      src=""
+      frameborder="1"
+      name="dalao"
+      width="1000px"
+      height="500px"
+    ></iframe> -->
+    <script>
+      var btn01 = document.getElementById("btn01");
+      btn01.onclick = function () {
+        open();
+      };
+
+      var btn02 = document.getElementById("btn02");
+      btn02.onclick = function () {
+        open("../BOM&DOM/DOM简介.html");
+      };
+
+      name = "myWindow";
+
+      var btn03 = document.getElementById("btn03");
+      btn03.onclick = function () {
+        // open("https://www.baidu.com", "myWindow");
+        open("https://www.taobao.com", "dalao");
+      };
+
+      var btn04 = document.getElementById("btn04");
+      btn04.onclick = function () {
+        open("https://www.taobao.com", "", "width=400px,height=300px");
+      };
+
+      // 关闭窗口
+      var btn05 = document.getElementById("btn05");
+      btn05.ondblclick = function () {
+        close();
+      };
+    </script>
+  </body>
+</html>

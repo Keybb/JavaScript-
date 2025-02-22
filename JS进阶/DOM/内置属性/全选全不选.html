@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #checks {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="checks">
+      <li>
+        <input type="checkbox" />
+        当实今，说了回保失此躲助的壬专哥太在褒，梵那传房人，人元得。
+      </li>
+      <li>
+        <input type="checkbox" />
+        当实今，说了回保失此躲助的壬专哥太在褒，梵那传房人，人元得。
+      </li>
+      <li>
+        <input type="checkbox" />
+        当实今，说了回保失此躲助的壬专哥太在褒，梵那传房人，人元得。
+      </li>
+      <li>
+        <input type="checkbox" />
+        当实今，说了回保失此躲助的壬专哥太在褒，梵那传房人，人元得。
+      </li>
+      <li>
+        <input type="checkbox" />
+        当实今，说了回保失此躲助的壬专哥太在褒，梵那传房人，人元得。
+      </li>
+      <li>
+        <input type="checkbox" />
+        当实今，说了回保失此躲助的壬专哥太在褒，梵那传房人，人元得。
+      </li>
+      <li>
+        <input type="checkbox" />
+        当实今，说了回保失此躲助的壬专哥太在褒，梵那传房人，人元得。
+      </li>
+      <li>
+        <input type="checkbox" />
+        当实今，说了回保失此躲助的壬专哥太在褒，梵那传房人，人元得。
+      </li>
+    </ul>
+    <button id="btn01">全选</button>
+    <button id="btn02">全不选</button>
+
+    <script>
+      // 获取所有的复选框
+      var checkboxItems = document.querySelectorAll("#checks input");
+      // 获取按钮元素
+      var btn01 = document.querySelector("#btn01");
+      var btn02 = document.querySelector("#btn02");
+
+      // 全选
+      btn01.onclick = function () {
+        for (var i = 0; i < checkboxItems.length; i++) {
+          checkboxItems[i].checked = true;
+        }
+      };
+
+      // 全不选
+      btn02.onclick = function () {
+        for (var i = 0; i < checkboxItems.length; i++) {
+          checkboxItems[i].checked = false;
+        }
+      };
+    </script>
+  </body>
+</html>

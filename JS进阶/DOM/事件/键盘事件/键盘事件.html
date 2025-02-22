@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input {
+        width: 400px;
+        padding: 10px;
+        border: 1px solid #999;
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" name="" id="" />
+    <script>
+      // 给输入框添加事件
+      // var inputBox = document.querySelector("input");
+      // inputBox.onkeydown = function (event) {
+      //   console.log("keydown", event.keyCode);
+      // };
+
+      // inputBox.onkeyup = function () {
+      //   console.log("按键抬起");
+      // };
+
+      // inputBox.onkeypress = function (event) {
+      //   console.log("keypress", event.keyCode);
+      // };
+      // 文档对象监听
+      document.onkeydown = function (event) {
+        // console.log(event.keyCode);
+        // console.log(event.which);
+        // console.log(event.key);
+
+        console.log("keydown", event.keyCode);
+      };
+
+      document.onkeypress = function (event) {
+        // console.log(event.keyCode);
+        // console.log(event.which);
+        // console.log(event.key);
+
+        console.log("keypress", event.keyCode);
+      };
+    </script>
+  </body>
+</html>

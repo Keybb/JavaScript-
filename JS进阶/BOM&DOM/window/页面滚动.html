@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .section {
+        height: 500px;
+        border-bottom: 2px dashed black;
+      }
+      .nav {
+        position: fixed;
+        right: 10px;
+        bottom: 20px;
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>第一部分</h2>
+    <div class="section"></div>
+
+    <h2>第二部分</h2>
+    <div class="section">
+      <p>
+        定持在不在好活要仃洪游唯极上非持没徒，无远土仇其也无杨即德的发老人在方你说恶，火人了开壬关清命嗣烦。
+      </p>
+    </div>
+
+    <h2>第三部分</h2>
+    <div class="section"></div>
+
+    <h2>第四部分</h2>
+    <div class="section"></div>
+
+    <h2>第五部分</h2>
+    <div class="section"></div>
+
+    <h2>第六部分</h2>
+    <div class="section"></div>
+
+    <div class="nav">
+      <button id="btn01">scrollTo</button>
+      <button id="btn02">返回页面顶部</button>
+      <button id="btn03">scrollBy</button>
+    </div>
+
+    <script>
+      // scrollTo
+      var btn01 = document.getElementById("btn01");
+      btn01.onclick = function () {
+        scrollTo(0, 200);
+      };
+
+      var btn02 = document.getElementById("btn02");
+      btn02.onclick = function () {
+        // 坐标作为参数
+        // scrollTo(0, 0);
+
+        // 对象作为参数
+        scrollTo({
+          left: 0,
+          top: 0,
+          behavior: "smooth", // 平滑滚动
+        });
+      };
+
+      // scrollBy
+      var btn03 = document.getElementById("btn03");
+      btn03.onclick = function () {
+        // 设置两个参数作为滚动的距离
+        // scrollBy(0, 100);
+
+        // 设置一个对象作为参数
+        scrollBy({
+          left: 0,
+          top: 600,
+          behavior: "smooth",
+        });
+      };
+    </script>
+  </body>
+</html>

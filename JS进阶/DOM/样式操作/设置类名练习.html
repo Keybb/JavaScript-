@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrapper {
+        margin: 20px auto;
+        width: 1000px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .item {
+        flex: 0 0 auto;
+        margin: 10px;
+        box-sizing: border-box;
+        width: 200px;
+        height: 80px;
+        text-align: center;
+        line-height: 80px;
+        background: #ccc;
+        cursor: pointer;
+      }
+
+      .item.active {
+        color: #fff;
+        text-decoration: wavy underline;
+        border: 2px solid #900;
+        background: #099;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="item">高小乐</div>
+      <div class="item">高小乐</div>
+      <div class="item">高小乐</div>
+      <div class="item">高小乐</div>
+      <div class="item">高小乐</div>
+      <div class="item">高小乐</div>
+      <div class="item">高小乐</div>
+      <div class="item">高小乐</div>
+      <div class="item">高小乐</div>
+      <div class="item">高小乐</div>
+      <div class="item">高小乐</div>
+      <div class="item">高小乐</div>
+      <div class="item">高小乐</div>
+      <div class="item">高小乐</div>
+      <div class="item">高小乐</div>
+      <div class="item">高小乐</div>
+      <div class="item">高小乐</div>
+      <div class="item">高小乐</div>
+      <div class="item">高小乐</div>
+      <div class="item">高小乐</div>
+      <div class="item">高小乐</div>
+      <div class="item">高小乐</div>
+      <div class="item">高小乐</div>
+      <div class="item">高小乐</div>
+    </div>
+
+    <script>
+      // 获取所有类名是item的元素
+      var itemBoxs = document.querySelectorAll(".item");
+      itemBoxs.forEach(function (item) {
+        item.onclick = function () {
+          // className方法
+
+          // if (item.className === "item") {
+          //   item.className = "item active";
+          // } else {
+          //   item.className = "item";
+          // }
+
+          // classList方法
+          // if (item.classList.contains("active")) {
+          //   item.classList.remove("active");
+          // } else {
+          //   item.classList.add("active");
+          // }
+
+          // 切换类名
+          item.classList.toggle("active");
+        };
+      });
+    </script>
+  </body>
+</html>

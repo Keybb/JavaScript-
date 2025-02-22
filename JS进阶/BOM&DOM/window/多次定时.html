@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #num {
+        font-size: 10em;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="btn">停止</button>
+    <div id="num">10</div>
+    <script>
+      // 设置多次定时器
+      setInterval(
+        function (name) {
+          console.log("hello world", name);
+        },
+        1000,
+        Math.random()
+      );
+
+      // 改变背景颜色
+      var interval01 = setInterval(changeBgColor, 500);
+      function changeBgColor() {
+        var r = Math.floor(Math.random() * 256);
+        var g = Math.floor(Math.random() * 256);
+        var b = Math.floor(Math.random() * 256);
+        document.body.style.backgroundColor =
+          "rgb(" + r + "," + g + "," + b + ")";
+      }
+
+      var btn = document.getElementById("btn");
+      btn.onclick = function () {
+        clearInterval(interval01);
+      };
+
+      // 倒计时
+      var num = 10;
+      var countDown = setInterval(function () {
+        num--;
+        var numEle = document.getElementById("num");
+        numEle.innerHTML = num;
+        if (num === 0) {
+          clearInterval(countDown);
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>

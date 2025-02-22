@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrapper {
+        margin: 100px auto;
+        width: 800px;
+        height: 200px;
+        border: 1px solid #f00;
+        display: flex;
+        overflow: hidden;
+      }
+      .wrapper img {
+        width: 200px;
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box" class="wrapper">
+      <img src="./imgs/db55.jpg" />
+      <img src="./imgs/db56.jpg" />
+      <img src="./imgs/db68.jpg" />
+      <img src="./imgs/db58.jpg" />
+      <img src="./imgs/db69.jpg" />
+      <img src="./imgs/db60.jpg" />
+      <img src="./imgs/db61.jpg" />
+      <img src="./imgs/db70.jpg" />
+      <img src="./imgs/db91.jpg" />
+      <img src="./imgs/db64.jpg" />
+    </div>
+
+    <script>
+      // 获取元素
+      var box = document.querySelector("#box");
+      console.log(box.scrollLeft);
+      box.innerHTML += box.innerHTML;
+
+      setInterval(function () {
+        box.scrollLeft += 10;
+        if (box.scrollLeft == 1900) {
+          box.scrollLeft = 0;
+        }
+      }, 100);
+    </script>
+  </body>
+</html>

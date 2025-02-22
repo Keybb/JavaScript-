@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input {
+        width: 300px;
+        padding: 10px;
+        outline: none;
+      }
+      span {
+        padding-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" name="" id="" />
+    <span></span>
+
+    <script>
+      var input = document.querySelector("input");
+      var span = document.querySelector("span");
+      input.onfocus = function () {
+        span.innerHTML = "正在输入...";
+      };
+
+      input.onblur = function () {
+        span.innerHTML = "输入完毕";
+      };
+
+      input.onselect = function () {
+        console.log("内容被选中了");
+      };
+    </script>
+  </body>
+</html>

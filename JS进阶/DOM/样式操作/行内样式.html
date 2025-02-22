@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        margin-top: 20px;
+        width: 600px;
+        padding: 20px;
+        border: 2px dashed #999;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="getBtn">获取样式值</button>
+    <button id="setBtn">设置样式值</button>
+
+    <div
+      id="box"
+      class="box"
+      style="background: #ccc; text-decoration: underline"
+    >
+      恩联人德我子釜高从份落，出陈五斯是修艳元仃并皮谓也四在，二等而生血人一你惜重人下是不，生担掉见也快国极一派向名外，资反们宋想处了她所苟九善，心梵尹非明高而家助有仄斯总也元未人，服一二量龄这秦设上应人然明，程子尘一甲决领可母生我云考非言逝舟婵我，设说郭药谓。
+    </div>
+
+    <script>
+      // 获取元素
+      var box = document.querySelector("#box");
+      var getBtn = document.querySelector("#getBtn");
+      var setBtn = document.querySelector("#setBtn");
+
+      getBtn.onclick = function () {
+        // .style 只能读取设置在行内的样式
+        console.log(box.style.textDecoration);
+        console.log(box.style.backgroundColor);
+        console.log(box.style.width);
+      };
+
+      setBtn.onclick = function () {
+        // 在行内添加或修改样式
+        box.style.textDecoration = "none";
+        box.style.backgroundColor = "tomato";
+        box.style.width = "600px";
+        box.style.color = "#fff";
+      };
+    </script>
+  </body>
+</html>

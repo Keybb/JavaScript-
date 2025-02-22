@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .box {
+        text-align: center;
+      }
+      .btn {
+        width: 100px;
+        height: 50px;
+        background-color: #eee;
+        text-align: center;
+        line-height: 50px;
+        border: 1px solid black;
+      }
+      .btn:nth-child(2) {
+        border-top: none;
+        border-bottom: none;
+      }
+      .btns {
+        position: fixed;
+        right: 10px;
+        top: 40%;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 class="box">ONE</h2>
+    <h2 class="box">TWO</h2>
+    <h2 class="box">THREE</h2>
+    <h2 class="box">FOUR</h2>
+    <h2 class="box">FIVE</h2>
+
+    <div class="btns">
+      <div class="btn" id="before">上一页</div>
+      <div class="btn" id="next">下一页</div>
+      <div class="btn" id="toTop">回顶部</div>
+    </div>
+  </body>
+  <script>
+    var box = document.getElementsByClassName("box");
+    var height = window.innerHeight;
+    console.log(height);
+    for (var i = 0; i < box.length; i++) {
+      box[i].style.height = height + "px";
+    }
+
+    // 按钮点击事件
+    var before = document.getElementById("before");
+    before.onclick = function () {
+      scrollBy({
+        top: -height,
+        behavior: "smooth",
+      });
+    };
+
+    var next = document.getElementById("next");
+    next.onclick = function () {
+      scrollBy({
+        top: height,
+        behavior: "smooth",
+      });
+    };
+
+    var toTop = document.getElementById("toTop");
+    toTop.onclick = function () {
+      scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    };
+  </script>
+</html>

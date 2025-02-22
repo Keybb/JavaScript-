@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        padding: 100px;
+      }
+
+      #box01 {
+        width: 800px;
+        background: #f00;
+      }
+
+      #box02 {
+        background: #f80;
+      }
+
+      #box03 {
+        background: #ff0;
+      }
+
+      #box04 {
+        height: 100px;
+        background: #080;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box01">
+      <div id="box02">
+        <div id="box03">
+          <div id="box04"></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // 获取元素
+      var box01 = document.querySelector("#box01");
+      var box02 = document.querySelector("#box02");
+      var box03 = document.querySelector("#box03");
+      var box04 = document.querySelector("#box04");
+
+      // 橙色监听
+      box02.addEventListener(
+        "click",
+        function () {
+          console.log("橙色颜色被点击了", this);
+        },
+        true
+      );
+      box03.addEventListener("click", function () {
+        console.log("黄色颜色被点击了");
+      });
+      box04.addEventListener("click", function () {
+        console.log("绿色颜色被点击了");
+      });
+    </script>
+  </body>
+</html>

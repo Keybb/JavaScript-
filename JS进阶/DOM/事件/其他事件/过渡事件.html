@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #box {
+        width: 200px;
+        height: 200px;
+        background-color: #900;
+        transition: 2s;
+      }
+
+      #box.active {
+        border-radius: 50%;
+        background-color: #099;
+        transform: rotate(360deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box"></div>
+
+    <script>
+      var box = document.querySelector("#box");
+      box.onclick = function () {
+        this.classList.toggle("active");
+      };
+
+      // 过渡开始
+      box.ontransitionstart = function () {
+        console.log("transitionstart");
+      };
+
+      box.ontransitionrun = function () {
+        console.log("transitionrun");
+      };
+
+      // 过渡结束
+      box.ontransitionend = function () {
+        console.log("transitionend");
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn">修改location的href</button>
+    <button id="btn2">刷新页面</button>
+    <button id="btn3">assign</button>
+    <button id="btn4">replace</button>
+    <script>
+      // 协议
+      console.log(location.protocol);
+      // url
+      console.log(location.href);
+      // 主机名
+      console.log(location.hostname);
+      // 端口号
+      console.log(location.port);
+      // 主机名+端口号
+      console.log(location.host);
+      // 路径信息
+      console.log(decodeURI(location.pathname));
+      // 锚点信息
+      console.log(location.hash);
+      // 参数信息
+      console.log(location.search);
+
+      var btn = document.getElementById("btn");
+      btn.onclick = function () {
+        location.href = "./history.html";
+      };
+
+      // 刷新页面
+      var btn2 = document.getElementById("btn2");
+      btn2.onclick = function () {
+        location.reload();
+      };
+
+      // assign
+      var btn3 = document.getElementById("btn3");
+      btn3.onclick = function () {
+        location.assign("http://www.jd.com");
+      };
+
+      // replace
+      var btn4 = document.getElementById("btn4");
+      btn4.onclick = function () {
+        location.replace("http://www.jd.com");
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrapper {
+        width: 600px;
+        padding: 20px;
+        border: 2px dashed #999;
+        /* overflow: hidden;
+            overflow: auto; */
+      }
+
+      .wrapper p {
+        padding: 20px;
+        width: 800px;
+        background: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box" class="wrapper">
+      什志服新读可可是了雷韩勉能哉回极德，亲胜头洪养慷生韦训弟我心，恼谓落么，范愚可。
+      <ul>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+      </ul>
+      <p>
+        救洪上，后与回才为居而高则讨入人，兮太者己，一葬逃而耐日光说都，天活太实他见使在自你他，水磊语皇，主了到心护病娇从叹是于尝时说，之生是千商的者下程友范本到哥，水亲丑不其见开我价，同月太反锐司土，仁位妙，在于仍负死，肯洪了而斯宫的言月别公竟是者韩都，公人家。
+      </p>
+    </div>
+
+    <div style="height: 1000px"></div>
+
+    <script>
+      // 获取元素
+      var box = document.querySelector("#box");
+
+      // offset
+      console.log("offset系列：", box.offsetWidth, box.offsetHeight);
+      // client
+      console.log("client系列：", box.clientWidth, box.clientHeight);
+      // scroll
+      console.log("scorll系列：", box.scrollWidth, box.scrollHeight);
+
+      // 返回一个对象 对象包含着元素的尺寸信息和位置信息
+      var rectDom = box.getBoundingClientRect();
+      // console.log(rectDom);
+      console.log("getBoundingClientRect：", rectDom.width, rectDom.height);
+      console.log("");
+
+      // 读取计算样式
+      console.log(getComputedStyle(box).width);
+      console.log(getComputedStyle(box).height);
+      console.log("");
+
+      // 读取视口宽度高度
+      console.log(innerWidth, innerHeight);
+      console.log(
+        document.documentElement.clientWidth,
+        document.documentElement.clientHeight
+      );
+    </script>
+  </body>
+</html>

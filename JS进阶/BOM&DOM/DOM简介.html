@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #box {
+        width: 600px;
+        height: 250px;
+        background-color: #ccc;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Javascript</h1>
+    <div id="box">
+      薪的在赐何天承罚升一若以尝之，读到我融给是彷太天可回尤到严气文这秦，回郭的一自上对制两一感匹拢病留看高同，属不的问越其是房车起在也不下后韩徨谭人，定我整沾国同挟我词韩，见圣我，其得有乡谋绪其，千不太。
+    </div>
+    <script>
+      // 获取一个html元素
+      var boxEle = document.getElementById("box");
+      console.log(boxEle);
+
+      // 给元素监听单击事件
+      boxEle.onclick = function () {
+        boxEle.style.backgroundColor = "tomato";
+        boxEle.style.color = "#fff";
+        boxEle.style.transition = "0.3s";
+        boxEle.innerHTML = "哈哈哈";
+      };
+    </script>
+  </body>
+</html>

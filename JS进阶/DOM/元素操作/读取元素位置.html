@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrapper {
+        /* position: relative; */
+        width: 600px;
+        padding: 20px;
+        border: 2px dashed #999;
+        /* overflow: hidden;
+            overflow: auto; */
+      }
+
+      .wrapper p {
+        padding: 20px;
+        width: 300px;
+        background: #ccc;
+        border: 2px solid #099;
+        border-left: dashed #099 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      什志服新读可可是了雷韩勉能哉回极德，亲胜头洪养慷生韦训弟我心，恼谓落么，范愚可。
+      <ul>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+      </ul>
+      <p id="box">
+        救洪上，后与回才为居而高则讨入人，兮太者己，一葬逃而耐日光说都，天活太实他见使在自你他，水磊语皇，主了到心护病娇从叹是于尝时说，之生是千商的者下程友范本到哥，水亲丑不其见开我价，同月太反锐司土，仁位妙，在于仍负死，肯洪了而斯宫的言月别公竟是者韩都，公人家。
+      </p>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum repellat
+        praesentium numquam eum natus molestias dolorem dolore est nobis,
+        voluptatibus incidunt nisi voluptatem eveniet error aliquid molestiae
+        blanditiis a! Aperiam?
+      </div>
+    </div>
+    <div style="height: 1000px"></div>
+
+    <script>
+      // 获取元素
+      var box = document.querySelector("#box");
+      // offset 在第一个设置定位的祖先元素上的位置 没有定位则参照整个页面
+      console.log(box.offsetLeft);
+      console.log(box.offsetTop);
+
+      // 上边框的宽度
+      console.log(box.clientTop);
+      // 左边框的宽度
+      console.log(box.clientLeft);
+
+      console.log("");
+      var rectDom = box.getBoundingClientRect();
+      // 元素在视口上的位置 如果页面滚动位置会变化
+      console.log(rectDom.left, rectDom.top);
+      console.log("");
+      // 同left 和 top
+      console.log(rectDom.x, rectDom.y);
+      console.log("");
+      // 元素右边的x坐标 和底部的y坐标 参照视口
+      console.log(rectDom.right, rectDom.bottom);
+    </script>
+  </body>
+</html>

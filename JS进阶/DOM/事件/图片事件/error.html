@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrapper {
+        margin: 0 auto;
+        width: 1000px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .wrapper img {
+        margin: 10px;
+        width: 220px;
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <img src="../../元素操作/imgs/db55.JPG" alt="" />
+      <img src="../../元素操作/imgs/db55.JPG" alt="" />
+      <img src="../../元素操作/imgs/db55.JPG" alt="" />
+      <img src="../../元素操作/imgs/db55.JPG" alt="" />
+      <img src="../../元素操作/imgs/db525.JPG" alt="" />
+      <img src="../../元素操作/imgs/db55.JPG" alt="" />
+    </div>
+
+    <script>
+      (function () {
+        // 获取所有图片元素
+        var imgItems = document.querySelectorAll("img");
+        imgItems.forEach(function (item) {
+          item.onerror = function () {
+            item.src = "./image/noimage.png";
+          };
+        });
+      })();
+    </script>
+  </body>
+</html>

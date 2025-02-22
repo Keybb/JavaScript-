@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn01">读取属性</button>
+    <button id="btn02">设置属性</button>
+
+    <br />
+    <img
+      src="./img/img001.jpg"
+      alt=""
+      width="200"
+      title="img001"
+      data-loadpic="100.jpg"
+    />
+    <script>
+      var imgbox = document.querySelector("img");
+      var btn01 = document.querySelector("#btn01");
+      var btn02 = document.querySelector("#btn02");
+
+      // 获取属性
+      btn01.onclick = function () {
+        var attr = imgbox.dataset.loadpic;
+        console.log(attr);
+      };
+
+      // 设置属性值
+      btn02.onclick = function () {
+        imgbox.dataset.loadpic = "200.jpg";
+      };
+    </script>
+  </body>
+</html>

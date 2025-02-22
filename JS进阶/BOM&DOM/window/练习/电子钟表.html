@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #time {
+        width: 100%;
+        margin-top: 100px;
+        text-align: center;
+        font-size: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="time"></div>
+    <script>
+      var timeEle = document.getElementById("time");
+      function displayTime() {
+        var date = new Date();
+        var year = date.getFullYear();
+        var month = date.getMonth() + 1;
+        var day = date.getDate();
+        var hour = date.getHours();
+        var minutes = date.getMinutes();
+        var sec = date.getSeconds();
+
+        var timeStr =
+          year +
+          " 年 " +
+          month +
+          " 月 " +
+          day +
+          " 日 " +
+          " " +
+          hour +
+          " : " +
+          minutes +
+          " : " +
+          sec;
+        timeEle.innerHTML = timeStr;
+      }
+
+      var count01 = setInterval(displayTime, 1000);
+    </script>
+  </body>
+</html>

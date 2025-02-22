@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="box">
+      考为不不先我我杨定那在招送，卑别视尺恩马则笔切前妙种木，可总心未即别行，老血者叹是壬畴仍老，由在送罪，而不意道破方尘不我法到意生同，瞠乏韩，者好说不若屯今月才保使才兄德人罚哥，为杂人终今，之冷便这宫。
+      <!-- 这是个注释 -->
+    </div>
+
+    <script>
+      console.log(document);
+      console.log(document.nodeName);
+      console.log(document.nodeValue);
+      console.log(document.nodeType);
+
+      var boxEle = document.getElementById("box");
+      console.log(boxEle);
+      console.log(boxEle.nodeName);
+      console.log(boxEle.nodeValue);
+      console.log(boxEle.nodeType);
+
+      var text = document.getElementById("box").firstChild;
+      console.log(text);
+      console.log(text.nodeName);
+      console.log(text.nodeValue);
+      console.log(text.nodeType);
+
+      var comment = document.getElementById("box").childNodes[1];
+      console.log(comment);
+      console.log(comment.nodeName);
+      console.log(comment.nodeValue);
+      console.log(comment.nodeType);
+
+      var attr = boxEle.getAttributeNode("id");
+      console.log(attr);
+      console.log(attr.nodeName);
+      console.log(attr.nodeValue);
+      console.log(attr.nodeType);
+    </script>
+  </body>
+</html>

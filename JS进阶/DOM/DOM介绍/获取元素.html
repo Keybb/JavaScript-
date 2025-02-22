@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper" id="box" name="xiaole">
+      <p class="item">诗畴传下台谓玉颜有卑者，说婵无否，承求。</p>
+      <p name="xiaole">诗畴传下台谓玉颜有卑者，说婵无否，承求。</p>
+      <p>诗畴传下台谓玉颜有卑者，说婵无否，承求。</p>
+      <p name="xiaole">诗畴传下台谓玉颜有卑者，说婵无否，承求。</p>
+    </div>
+
+    <p>为郭在因颜他心，兴。</p>
+    <p class="item active">为郭在因颜他心，兴。</p>
+    <p>为郭在因颜他心，兴。</p>
+
+    <script>
+      // 从文档直接获取p元素 是一个集合
+      var pEleList = document.getElementsByTagName("p");
+
+      // 先获取id为box的元素 再获取后代的p元素
+      var boxEle = document.getElementById("box");
+      var pList2 = boxEle.getElementsByTagName("p");
+      console.log(pList2);
+
+      pList2[pList2.length - 1].style.backgroundColor = "tomato";
+
+      // 通过类名获取
+      var items = document.getElementsByClassName("item");
+      console.log(items);
+
+      var items02 = boxEle.getElementsByClassName("item");
+      console.log(items02);
+
+      // 通过name属性获取
+      var names = document.getElementsByName("xiaole");
+      console.log(names);
+    </script>
+  </body>
+</html>

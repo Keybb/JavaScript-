@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrapper {
+        padding: 20px;
+        width: 600px;
+        border: 1px dashed #900;
+      }
+
+      p {
+        width: 500px;
+        padding: 20px;
+        background: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box" class="wrapper">
+      <p class="item">尹了未必极下一，薪的反法没第不人不上老。</p>
+      <div class="item">尹了未必极下一，薪的反法没第不人不上老。</div>
+      <p class="item">尹了未必极下一，薪的反法没第不人不上老。</p>
+      <div>尹了未必极下一，薪的反法没第不人不上老。</div>
+    </div>
+
+    <p>Lorem ipsum dolor sit amet.</p>
+    <div class="item active">Lorem ipsum dolor sit amet.</div>
+    <p>Lorem ipsum dolor sit amet.</p>
+
+    <script>
+      var boxELe = document.querySelector("#box");
+      console.log(boxELe);
+
+      var itemEle = document.querySelector(".item");
+      console.log(itemEle);
+
+      var odd = document.querySelector(".wrapper :nth-child(odd)");
+      console.log(odd);
+
+      // 获取符合条件的所有元素
+      var itemList = document.querySelectorAll(".wrapper .item");
+      console.log(itemList);
+
+      var pEle = boxELe.querySelector("p");
+      console.log(pEle);
+
+      var pEleList = boxELe.querySelectorAll("p");
+      console.log(pEleList);
+    </script>
+  </body>
+</html>

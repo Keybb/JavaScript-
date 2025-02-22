@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 300px;
+        height: 300px;
+        background-color: pink;
+        padding: 20px;
+      }
+      p {
+        min-height: 50px;
+        background-color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <p></p>
+      <p></p>
+    </div>
+    <script>
+      var boxEle = document.querySelector(".box");
+      boxEle.addEventListener("mousedown", function (event) {
+        console.log("鼠标按下", event.button);
+        boxEle.style.backgroundColor = "tomato";
+      });
+      boxEle.addEventListener("mouseup", function () {
+        console.log("鼠标抬起");
+        boxEle.style.backgroundColor = "pink";
+      });
+
+      // 监听鼠标移动事件
+      boxEle.addEventListener("mousemove", function (event) {
+        this.firstElementChild.innerHTML +=
+          "在目标元素上的位置：" +
+          event.offsetX +
+          ", " +
+          event.offsetY +
+          "<br>";
+        this.firstElementChild.innerHTML +=
+          "在视口上的位置：" + event.clientX + ", " + event.clientY + "<br>";
+        this.firstElementChild.innerHTML +=
+          "在页面上的位置：" + event.pageX + ", " + event.pageY + "<br>";
+        this.firstElementChild.innerHTML +=
+          "在屏幕上的位置：" + event.screenX + ", " + event.screenY + "<br>";
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn01">后退一步</button>
+    <button id="btn02">前进一步</button>
+    <button id="btn03">前进两步</button>
+    <button id="btn04">后退两步</button>
+    <script>
+      // length 本窗口历史记录数量
+      console.log(history.length);
+      // back() 后退
+      var btn01 = document.getElementById("btn01");
+      btn01.onclick = function () {
+        history.back();
+      };
+
+      // forward 前进
+      var btn02 = document.getElementById("btn02");
+      btn02.onclick = function () {
+        history.forward();
+      };
+      // go 前进两步
+      var btn03 = document.getElementById("btn03");
+      btn03.onclick = function () {
+        history.go(2);
+      };
+
+      // go 后退两步
+      var btn04 = document.getElementById("btn04");
+      btn04.onclick = function () {
+        history.go(-2);
+      };
+    </script>
+  </body>
+</html>

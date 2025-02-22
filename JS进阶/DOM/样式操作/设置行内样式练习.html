@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .wrapper {
+        width: 800px;
+        height: 600px;
+        margin: 50px auto;
+      }
+      ul {
+        width: 100%;
+        height: 100%;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      ul li {
+        width: 150px;
+        height: 80px;
+        background-color: #ccc;
+        line-height: 80px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <ul id="box">
+        <li>高小乐</li>
+        <li>高小乐</li>
+        <li>高小乐</li>
+        <li>高小乐</li>
+        <li>高小乐</li>
+        <li>高小乐</li>
+        <li>高小乐</li>
+        <li>高小乐</li>
+        <li>高小乐</li>
+        <li>高小乐</li>
+        <li>高小乐</li>
+        <li>高小乐</li>
+        <li>高小乐</li>
+        <li>高小乐</li>
+        <li>高小乐</li>
+        <li>高小乐</li>
+        <li>高小乐</li>
+        <li>高小乐</li>
+        <li>高小乐</li>
+        <li>高小乐</li>
+      </ul>
+    </div>
+
+    <script>
+      var boxEle = document.querySelectorAll("#box li");
+      boxEle.forEach(function (item) {
+        item.onclick = function () {
+          if (item.style.backgroundColor) {
+            item.style.backgroundColor = "";
+          } else {
+            item.style.backgroundColor = "#099";
+            item.style.color = "#fff";
+          }
+        };
+      });
+    </script>
+  </body>
+</html>
