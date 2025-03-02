@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="btns">
+      <button>按钮01</button>
+      <button>按钮02</button>
+      <button>按钮03</button>
+      <button>按钮04</button>
+      <button>按钮05</button>
+    </div>
+
+    <script>
+      // 1.声明多个变量并赋值
+      const num = Math.random();
+      const arr = [
+        100,
+        200,
+        { name: "小乐", age: 100 },
+        function () {
+          alert("ok");
+        },
+        num,
+      ];
+      // const [v1, v2, v3, v4, v5] = arr;
+      let [v1, v2, v3, v4, v5] = arr;
+
+      // console.log(v1);
+      // console.log(v2);
+      // console.log(v3);
+      // console.log(v4);
+      // console.log(v5);
+
+      // 2.同时修改多个变量的值
+      [v1, v2, v3, v4] = ["张三", "李四", "王五", "赵六"];
+      console.log(v1);
+      console.log(v2);
+      console.log(v3);
+      console.log(v4);
+
+      // 3.交换两个变量的值
+      [v1, v2] = [v2, v1];
+      console.log(v1, v2);
+
+      // 4.用于函数传参
+      function func([name1, name2, name3]) {
+        console.log(name1, name2, name3);
+      }
+      func(["小明", "小刚", "小红"]);
+
+      // 5.两边的数组解构不完全一致
+      let [a1, a2, a3] = [100, 200, 300, 400, 500];
+      const [b1, b2, b3] = [1000, 2000];
+      console.log(a1, a2, a3);
+      console.log(b1, b2, b3); // b3=undefined
+      [a1, a2, a3] = ["1", "2"]; // a3=undefined 重新赋值，不保留原有的值
+
+      // 6.左边的变量可以指定默认值
+      const [c1, c2, c3 = 250] = [100, 200];
+      console.log(c1, c2, c3);
+
+      // 7.解构格式复杂的数组
+      const arr1 = [100, ["高小乐", 199], [100, [10, 20]]];
+      const [a, [b, c], [d, [e, f]]] = arr1;
+      console.log(a, b, c, d, e, f);
+
+      // 8.伪数组也能被解构
+      const msg = "hello world";
+      const btns = document.querySelectorAll(".btns button");
+      const [s1, s2, s3] = msg;
+      console.log(s1, s2, s3);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1.声明没有参数的函数
+      const fn01 = () => {};
+      console.log(fn01);
+
+      // 2.声明有参数的函数
+      const fn02 = (name, age) => {
+        console.log(`my name is ${name}, i'm ${age} years old.`);
+      };
+      fn02("kivi", 100);
+
+      // 3.如果箭头函数的参数只有一个，可以省略小括号
+      const fn03 = (num) => {
+        console.log(num * 2 + 100);
+      };
+      // const fn03 = num => {
+      //   console.log(num * 2 + 100);
+      // };
+      fn03(10);
+
+      // 4.如果箭头函数的函数体只有一条语句，且是返回语句，可以省略{}和return
+      // const fn04 = (n1, n2) => {
+      //   return n1 * n2;
+      // };
+      const fn04 = (n1, n2) => n1 * n2;
+
+      console.log(fn04(100, 200));
+    </script>
+  </body>
+</html>

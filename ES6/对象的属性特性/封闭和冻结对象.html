@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const arr = [10, 20, 30, 40, 50, 60];
+      arr.name = "kivi";
+      arr.address = "wuhan";
+
+      // 封闭对象
+      // Object.seal(arr);
+      // console.log(Object.isSealed(arr));
+
+      // 冻结对象
+      Object.freeze(arr);
+      console.log("是否封闭：", Object.isSealed(arr));
+      console.log("是否冻结：", Object.isFrozen(arr));
+
+      // 封闭之后不能添加新属性，旧的属性不能配置(configurable:false)
+      // arr.age = 10;
+      // console.log(arr.age);
+      // arr.name = "tomato";
+      // console.log(arr.name);
+
+      // 冻结之后不能添加新属性，旧的属性不能配置(configurable:false) 不能写(writable:false)
+      arr.age = 10;
+      console.log(arr.age);
+      arr.name = "tomato";
+      console.log(arr.name); // kivi
+    </script>
+  </body>
+</html>

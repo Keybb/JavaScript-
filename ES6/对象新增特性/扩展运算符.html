@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const nums = [100, 200, 300, 400, 500, 600];
+      const user = {
+        name: "kivi",
+        age: 45,
+        address: "beijing",
+        say() {},
+        drink() {},
+      };
+
+      console.log(...nums);
+      console.log();
+
+      // 对象的拷贝
+      const user02 = { ...user };
+      user02.name = "tomato";
+      console.log(user02);
+      console.log(user);
+
+      // 对象的合并
+      const user03 = { wife: "tomato", wifeAge: 18 };
+      const obj = { ...user, ...user03 };
+      console.log(obj);
+
+      // 对象解构赋值
+      const { age, address, ...data } = user02;
+      console.log(age, address);
+      console.log(data);
+    </script>
+  </body>
+</html>

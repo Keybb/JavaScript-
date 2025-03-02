@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function func(...args) {
+        console.log(args);
+      }
+      func(10, 20, 30, 40, 50, 60);
+
+      // 标签模板
+      func``; // func([]);
+      func`hello world`; // 相对于 func(['hello world']);
+
+      const a = 100,
+        b = 200;
+      // 变量变成了分隔符
+      func`hello ${a} world ${b}`;
+      // 相对于 func(['hello ',' world ',''],100,200);
+    </script>
+  </body>
+</html>

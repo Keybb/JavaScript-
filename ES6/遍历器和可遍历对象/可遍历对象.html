@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const arr = [100, 200, 300, 400, 500];
+      const msg = "hello world";
+      const set = new Set(msg);
+      console.log(arr);
+
+      // 调用数组的 iterator 接口，可以得到一个遍历器
+      const iter = arr[Symbol.iterator]();
+
+      for (let v of arr) {
+        console.log(v);
+      }
+
+      for (let v of msg) {
+        console.log(v);
+      }
+    </script>
+  </body>
+</html>

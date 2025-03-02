@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class MyArray extends Array {
+        #name;
+        // 重写构造器方法
+        constructor(name, ...args) {
+          super(...args);
+          this.#name = name;
+        }
+      }
+      const arr = new MyArray("kivi", 10, 20, 30, 40);
+      console.log(arr);
+
+      function func(...args) {
+        console.log(args);
+      }
+      func(1, 2, 3, 4, 5, 6, 7, 8);
+    </script>
+  </body>
+</html>

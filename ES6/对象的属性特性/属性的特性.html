@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const arr = [100, 200];
+      arr.firstName = "高";
+      arr.lastName = "乐";
+
+      const user = {
+        name: "曹操",
+        age: 19,
+        address: "上海",
+        say() {},
+        eat() {},
+      };
+
+      for (let i in user) {
+        console.log(i);
+      }
+      console.log("");
+
+      console.log(arr);
+      for (let i in arr) {
+        console.log(i, arr[i]);
+      }
+      console.log("");
+
+      // user 对象的属性的特性
+      const a = Object.getOwnPropertyDescriptor(user, "address");
+      console.log(a);
+      const b = Object.getOwnPropertyDescriptors(user);
+      console.log(b);
+    </script>
+  </body>
+</html>

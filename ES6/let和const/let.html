@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 2.let创建的变量不会提升
+      console.log(age);
+      // console.log(address); // 报错
+
+      let address = "shanghai";
+      var age = 100;
+
+      // 1.let创建的变量不能重复声明,var可以
+      // let address = 'beijing';  报错
+      var age = 100;
+      // let age = 100;  报错
+      // var address = 'wuhan'; 报错
+
+      // 3.let创建的全局变量不是全局对象的属性
+      console.log(window.address); // undefined
+      console.log(window.age);
+
+      // 4.let创建的变量出了具有全局作用域、函数内作用域，还具备块级作用域
+    </script>
+  </body>
+</html>

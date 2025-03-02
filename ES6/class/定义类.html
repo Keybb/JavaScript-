@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 原始方法
+      function Func(name, age) {
+        this.name = name;
+        this.age = age;
+        this.getInfo = function () {};
+      }
+      const f1 = new Func("kivi", 90);
+      // console.log(f1);
+      console.log(f1.__proto__.__proto__);
+
+      // 定义类
+      class Product {
+        // 设置属性
+        name = "car";
+        price = 121.23;
+
+        // 设置方法 以这种形式设置的方法在原型上
+        buy(n) {
+          console.log(`购买了${n}量汽车`);
+        }
+        addShopCar() {
+          console.log(`将${this.name}加入购物车`);
+        }
+      }
+
+      console.log(Product);
+      const p1 = new Product();
+      console.log(p1);
+      p1.buy(20);
+    </script>
+  </body>
+</html>

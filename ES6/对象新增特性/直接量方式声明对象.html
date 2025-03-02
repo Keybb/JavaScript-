@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1.用变量表示属性值，变量名和属性名同名
+      const username = "kivi",
+        age = 90,
+        address = "shanghai";
+      function say() {
+        console.log("say function");
+      }
+      // 一般写法
+      // const user = {
+      //   username: username,
+      //   age: age,
+      //   address: address,
+      //   say: say,
+      // };
+
+      // 简写语法
+      const prop = "homeAddress";
+      const user = {
+        username,
+        age,
+        address,
+        // 表达式作为属性名
+        [10 + 10]: "hello",
+        [prop]: "beijing",
+        say,
+        eat: function () {},
+        drink: () => {},
+        // 省略function关键字
+        getInfo() {
+          console.log("getInfo function");
+        },
+        setAge(age) {
+          this.age = age;
+        },
+      };
+      console.log(user);
+      user.getInfo();
+    </script>
+  </body>
+</html>

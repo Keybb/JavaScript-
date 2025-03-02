@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="box">
+      <li>
+        <span>1</span>
+        <a href="">刘姥姥</a>
+      </li>
+    </ul>
+    <script>
+      const msg = `hello world`;
+      const content = `
+              锄禾日当午
+              汗滴禾下土
+              谁知盘中餐
+              粒粒皆辛苦
+              `;
+      console.log(content); // 控制台中会换行
+      // document.body.innerHTML = content; // html中不会
+
+      // 直接插入变量
+      const name = "js";
+      const gender = "未知";
+      const age = 190;
+      const message = `我的名字叫${name}, 我的性别是${gender}, 我的年龄是${
+        age + 10
+      }`;
+      console.log(message);
+
+      // 定义数组
+      const data = ["刘姥姥", "马姥姥", "司马姥姥", "欧阳姥姥", "宇文姥姥"];
+      const html = data
+        .map(function (item, index) {
+          return `
+        <li>
+          <span>${index}</span>
+          <a href="">${item}</a>
+        </li>
+        `;
+        })
+        .join("");
+      console.log(html);
+      const box = document.querySelector("#box");
+      box.innerHTML = html;
+    </script>
+  </body>
+</html>

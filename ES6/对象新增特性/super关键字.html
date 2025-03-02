@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var name = "window";
+      const user01 = {
+        name: "kivi",
+        say() {
+          console.log("this:", this.name);
+          console.log("super:", super.name);
+        },
+      };
+      user01.__proto__.name = "fruit";
+      user01.say();
+
+      const user02 = [];
+      user02.name = "tomato";
+      user02.__proto__.name = "vegetable";
+      user02.say = user01.say;
+
+      user02.say();
+
+      const fn = user01.say;
+      fn();
+    </script>
+  </body>
+</html>

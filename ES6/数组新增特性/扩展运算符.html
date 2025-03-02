@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul class="news">
+      <li>友负促人韦第，便得是沫，的能。</li>
+      <li>友负促人韦第，便得是沫，的能。</li>
+      <li>友负促人韦第，便得是沫，的能。</li>
+      <li>友负促人韦第，便得是沫，的能。</li>
+      <li>友负促人韦第，便得是沫，的能。</li>
+    </ul>
+    <script>
+      // 将数组转为逗号分隔的参数序列
+      const nums = [1000, 2000, 3000, 4000];
+      function func(n1, n2, n3, n4) {
+        console.log(n1, n2, n3, n4);
+      }
+
+      func(nums);
+
+      func(...nums); // 相对于 func(1000,2000,3000,4000)
+      func(...["kivi", "apple", "tomato"]);
+
+      // 复制数组
+      const arr01 = [100, 200, 300, 400, 500];
+      // const arr02 = arr01;
+      // arr02[2] = "kivi";
+      // console.log(arr01);
+      const arr02 = [...arr01];
+      arr02[2] = "kivi";
+      console.log(arr01);
+      console.log(arr02);
+
+      // 合并数组
+      const arr03 = [...nums, ...arr01];
+      console.log(arr03);
+      const arr04 = nums.concat(arr01);
+      console.log(arr04);
+
+      // 将可遍历对象转为逗号分隔的参数序列
+      const liBox = document.querySelectorAll(".news li");
+      const arr05 = [...liBox];
+      console.log(arr05);
+      console.log([..."hello world"]);
+    </script>
+  </body>
+</html>

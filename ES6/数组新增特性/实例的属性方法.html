@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 定义数组
+      const users = [
+        { name: "刘备", age: 15, address: "上海" },
+        { name: "关羽", age: 43, address: "苏州" },
+        { name: "张飞", age: 41, address: "无锡" },
+        { name: "诸葛亮", age: 45, address: "杭州" },
+        { name: "向华强", age: 36, address: "宁波" },
+        { name: "曹操", age: 54, address: "南京" },
+      ];
+
+      // 查找第一个年龄大于等于45的元素
+      console.log(users.find((item) => item.age >= 45));
+      console.log(users.findIndex((item) => item.age >= 45));
+      console.log(users);
+
+      users.fill("200", 1, 4);
+      console.log(users);
+
+      // 定义数组
+      const numList = [
+        [1000, 2000, 3000],
+        "hello",
+        [[10, 20, 30], ["a", "b", ["A", "B", "C"]], "小乐"],
+        12313,
+        [101, 202, 303],
+      ];
+
+      // 数组扁平化
+      const flatList = numList.flat(Infinity);
+      console.log(flatList);
+
+      const nums = [100, 200, 300, 400, 500];
+      console.log(nums.at(-1)); // 倒数第一个
+    </script>
+  </body>
+</html>

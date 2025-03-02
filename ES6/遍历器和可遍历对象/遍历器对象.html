@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const arr = [100, 200, 300, 400, 500, 600, 700];
+      const valIter = arr.values();
+      console.log(valIter);
+      console.log(valIter.constructor);
+
+      console.log(valIter.next());
+      console.log(valIter.next());
+      console.log(valIter.next());
+      console.log(valIter.next());
+      console.log(valIter.next());
+      console.log(valIter.next());
+      console.log(valIter.next());
+      console.log(valIter.next());
+      console.log("");
+
+      const keyIter = arr.keys();
+      console.log(keyIter.next());
+      while (1) {
+        let data = keyIter.next();
+        if (data.done) {
+          break;
+        }
+        console.log(data.value);
+      }
+
+      const kvIter = arr.entries();
+      for (let v of kvIter) {
+        console.log(v);
+      }
+    </script>
+  </body>
+</html>

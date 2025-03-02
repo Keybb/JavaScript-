@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const person = {
+        name: "kivi",
+        address: "wuhan",
+      };
+
+      // 修改 address 属性的特性
+      Object.defineProperty(person, "address", {
+        configurable: false,
+        enumerable: false,
+        writable: false,
+        value: "北京",
+      });
+      console.log(person);
+
+      // person.address = "深圳";
+      // delete person.address;
+      // console.log(person);
+
+      // 添加属性冰设置特性
+      Object.defineProperty(person, "age", {
+        configurable: false,
+        enumerable: true,
+        writable: false,
+        value: 100,
+      });
+      console.log(person);
+
+      for (let i in person) {
+        console.log(i, person[i]);
+      }
+    </script>
+  </body>
+</html>

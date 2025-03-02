@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.log("hello".repeat(10));
+      console.log("");
+
+      const msg = "hello world";
+      console.log(msg.includes("h", 2));
+
+      console.log(msg.startsWith("h"));
+      console.log(msg.endsWith("d"));
+
+      const msg2 = "   hello, world  ";
+      console.log(msg2);
+      console.log(msg2.trim());
+      console.log(msg2.trimStart());
+      console.log(msg2.trimEnd());
+      // 指定填充后的长度为25
+      console.log(msg.padStart(25, "javascript"));
+      console.log(msg.padEnd(25, "javascript"));
+      console.log(msg.replaceAll());
+
+      console.log(msg.replace("l", "L"));
+      console.log(msg.replaceAll("l", "L"));
+    </script>
+  </body>
+</html>

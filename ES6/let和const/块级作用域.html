@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let school = "123";
+      {
+        console.log("我是块区域");
+
+        var homeAddress = "shanghai";
+        let school = "beijing";
+        console.log(school);
+        console.log(homeAddress);
+      }
+      console.log(school);
+      console.log(homeAddress);
+
+      // 分支结构产生块级作用域
+      if (1) {
+        var age01 = 100; // 全局变量
+        let age02 = 200; // 具有块级作用域
+      }
+      console.log(age01);
+      // console.log(age02); //报错
+
+      // 循环结构产生块级作用域
+      for (let i = 0; i < 5; i++) {
+        console.log(i);
+      }
+      // console.log(i); // 报错
+    </script>
+  </body>
+</html>

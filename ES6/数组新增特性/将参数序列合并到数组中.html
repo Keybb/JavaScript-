@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 将参数序列合并到数组中
+      // rest
+      function func(...args) {
+        console.log(args);
+      }
+      func(100, 200, 300);
+
+      // 解构赋值
+      const [a1, a2, ...a3] = ["kivi", "apple", "tomato", "potato"];
+      console.log(a3); // ['tomato', 'potato']
+    </script>
+  </body>
+</html>

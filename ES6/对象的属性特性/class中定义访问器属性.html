@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Product {
+        // 数据属性
+        name = "kivi";
+        address = "wuhan";
+        #age = 0;
+        // 访问器属性
+        get age() {
+          return this.#age;
+        }
+        set age(val) {
+          val = +val;
+          if (val >= 0 && val <= 200) {
+            this.#age = val;
+          }
+        }
+      }
+
+      const p = new Product();
+      console.log(p);
+      p.age = 124;
+      console.log(p.age);
+    </script>
+  </body>
+</html>

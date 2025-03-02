@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const msg = new String("hello");
+      const ws = new WeakSet([new Number(100), msg, { name: "kivi" }, msg]);
+      console.log(ws);
+
+      ws.add({ age: 10 });
+      console.log(ws);
+
+      console.log(ws.has({ name: "kivi" }));
+      console.log(ws.has(msg));
+
+      ws.delete(msg);
+      console.log(ws);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 判等
+      console.log(Object.is(100, "100")); // false
+      console.log(Object.is(100, 100)); // true
+      console.log(Object.is(NaN, NaN)); // true
+
+      const user = {
+        name: "kivi",
+        age: 90,
+        address: "beijing",
+        say() {},
+        drink() {},
+      };
+      console.log(Object.keys(user));
+      const entries = Object.entries(user);
+      console.log(entries);
+      console.log(Object.fromEntries(entries));
+
+      console.log(Object.getPrototypeOf(user));
+      console.log(user.__proto__);
+
+      const arr = [10, 20, 30, 40];
+      Object.setPrototypeOf(arr, user);
+      console.log(arr.address);
+      console.log(arr.push);
+
+      console.log(Object.hasOwn(user, "constructor")); // flase
+      console.log(Object.hasOwn(user, "name")); // true
+    </script>
+  </body>
+</html>

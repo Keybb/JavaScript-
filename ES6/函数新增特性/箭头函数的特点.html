@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="news">
+      <li>词徒喜，十畴心得秦。</li>
+      <li>词徒喜，十畴心得秦。</li>
+      <li>词徒喜，十畴心得秦。</li>
+      <li>词徒喜，十畴心得秦。</li>
+      <li>词徒喜，十畴心得秦。</li>
+    </ul>
+    <script>
+      const func = (name, age, ...args) => {
+        console.log(`${name}的年龄是${age}`);
+        console.log(args);
+      };
+      func("kivi", 100, "apple", "tomato");
+
+      const user = {
+        name: "kivi",
+        getInfo: () => {
+          console.log(this);
+        },
+      };
+      user.getInfo(); // window
+
+      const liBox = document.querySelectorAll("#news li");
+      liBox.forEach(function (item) {
+        item.onclick = () => {
+          console.log(this); // window
+        };
+      });
+    </script>
+  </body>
+</html>

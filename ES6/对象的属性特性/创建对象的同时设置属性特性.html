@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const obj = Object.create(Array.prototype, {
+        0: {
+          configurable: false,
+          enumerable: false,
+          writable: true,
+          value: "beijing",
+        },
+        1: {
+          configurable: false,
+          enumerable: false,
+          writable: true,
+          value: "wuhan",
+        },
+        address: {
+          enumerable: false,
+          configurable: false,
+          writable: false,
+          value: "shanghai",
+        },
+        age: {
+          configurable: true,
+          enumerable: false,
+          set: function (val) {},
+          get: function () {
+            return 100;
+          },
+        },
+      });
+      console.log(obj);
+    </script>
+  </body>
+</html>

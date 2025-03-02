@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Product {
+        // 设置属性
+        name;
+        price;
+
+        // 构造器方法 给属性赋值
+        constructor(name, price) {
+          this.name = name;
+          this.price = Math.max(price, 100);
+          this.num = Math.random();
+        }
+
+        // 设置方法 以这种形式设置的方法在原型上
+        buy(n) {
+          console.log(`购买了${n}量汽车`);
+        }
+        addShopCar() {
+          console.log(`将${this.name}加入购物车`);
+        }
+      }
+
+      const p1 = new Product("xiaomi14", 1999);
+      const p2 = new Product("iphone16", 3999);
+
+      console.log(p1);
+      console.log(p2);
+    </script>
+  </body>
+</html>

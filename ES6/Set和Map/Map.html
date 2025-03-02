@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const arr = [10, 20, 30, 40];
+      const user = { name: "kivi" };
+      const s = new Set(arr);
+
+      // 创建Map
+      const map = new Map([
+        [arr, arr],
+        [user, "上海"],
+        [s, ["tomato", "potato"]],
+        ["address", "北京"],
+        [100, "hello"],
+      ]);
+      // console.log(map);
+      console.log("");
+
+      map.set(arr, 250);
+      // console.log(map);
+      console.log("");
+
+      console.log(map.has("address"));
+      console.log("");
+
+      console.log(map.get(100));
+
+      // map.clear();
+
+      console.log(map.keys());
+      console.log(map.values());
+      console.log(map.entries());
+
+      console.log(map.size);
+      map.forEach((item, index) => {
+        console.log(item, index);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const arr = [10, 20, 30, 40];
+      const user = { name: "小乐" };
+      const s = new Set(arr);
+
+      // 创建 WeakMap 类型  WeakMap 构造函数的参数必须是个二维数组
+      const wm = new WeakMap([
+        [arr, arr],
+        [user, "上海"],
+        [s, ["司马姥姥", "欧阳姥姥"]],
+        [{}, "北京"],
+        [new Number(100), "helo world"],
+      ]);
+
+      console.log(wm);
+    </script>
+  </body>
+</html>

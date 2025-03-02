@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const user = {
+        name: "kivi",
+        age: 90,
+        address: "beijing",
+        say() {},
+        drink() {},
+      };
+
+      const data = {
+        homeAddress: "伦敦",
+        schoolAddress: "纽约",
+        address: "上海",
+      };
+      const nums = [10, 20, 30, 40];
+      // Object.assign(user,data,nums);
+      // 合并到第一个对象里并返回
+      const user01 = Object.assign({}, user, data, nums);
+      console.log(user01);
+
+      // 克隆对象
+      const user02 = Object.assign({}, user);
+      user02.name = "tomato";
+      console.log(user);
+      console.log(user02);
+
+      // 解构赋值
+      const { ...arr } = nums;
+      console.log(arr);
+    </script>
+  </body>
+</html>

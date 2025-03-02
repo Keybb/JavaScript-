@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function fun01(...args) {
+        console.log(args);
+      }
+      fun01();
+      fun01(100, 200, 300, "hello", true);
+
+      function fun02(name, age, ...data) {
+        console.log(name, age);
+        console.log("rest:", data);
+        console.log("arguments:", arguments);
+      }
+      fun02("hhh", 101, "张三", "李四", "王五");
+    </script>
+  </body>
+</html>

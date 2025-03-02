@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Product {
+        // 设置静态属性
+        static name = "kivi";
+
+        // 定义静态方法
+        static getInfo() {
+          console.log("我是静态方法");
+        }
+      }
+      console.log(Product.getInfo);
+      Product.getInfo();
+    </script>
+  </body>
+</html>

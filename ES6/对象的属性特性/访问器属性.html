@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const person = {
+        name: "kivi",
+        address: "wuhan",
+        _age: 0,
+      };
+
+      // 添加属性
+      Object.defineProperty(person, "age", {
+        enumerable: true,
+        configurable: true,
+        set: function (val) {
+          val = +val;
+          if (val >= 0 && val <= 200) {
+            this._age = val;
+          }
+        },
+        get: function () {
+          console.log(this);
+          return this._age;
+        },
+      });
+      console.log(person);
+      person.age = 20;
+      console.log(person.age);
+    </script>
+  </body>
+</html>

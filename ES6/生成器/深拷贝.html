@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const user = {
+        name: "kivi",
+        address: "shanghai",
+        children: [100, 200, 300, 400],
+        parent: {
+          name: "fruit",
+          age: 100,
+          address: "beijing",
+        },
+        say() {},
+        getInfo() {},
+      };
+
+      // 浅拷贝，只拷贝了第一层
+      // const user02 = { ...user };
+      // user02.children[0] = "hello";
+      // console.log(user);
+
+      // 定义获取对象类型的方法
+      const getType = (data) => {
+        const str = Object.prototype.toString.call(data);
+        return str.slice(8, str.length - 1);
+      };
+      console.log(getType(12));
+
+      // 递归函数实现深拷贝
+      function deepCopy(obj) {
+        let res;
+        //  判断obj是什么类型
+        if (getType(obj) === "Object") {
+          res = {};
+        } else if (getType(obj) === "Array") {
+          res = [];
+        } else {
+          return obj;
+        }
+
+        // 遍历数据
+        for (let i in obj) {
+          res[i] = deepCopy(obj[i]);
+        }
+        return res;
+      }
+      const obj02 = deepCopy(user);
+      console.log(obj02);
+
+      // JSON 不能拷贝方法
+      // const user02 = JSON.parse(JSON.stringify(user));
+      // console.log(user02);
+      // user02.children[1] = "hello";
+      // console.log(user);
+    </script>
+  </body>
+</html>

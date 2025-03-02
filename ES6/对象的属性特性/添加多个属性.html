@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const user = {
+        name: "kivi",
+        _age: 0,
+      };
+
+      // 添加多个属性并设置属性的特性
+      Object.defineProperties(user, {
+        address: {
+          enumerable: false,
+          configurable: false,
+          writable: false,
+          value: "shanghai",
+        },
+        age: {
+          configurable: true,
+          enumerable: false,
+          set: function (val) {
+            val = +val;
+            if (val >= 0 && val <= 200) {
+              this._age = val;
+            }
+          },
+          get: function () {
+            return this._age;
+          },
+        },
+      });
+
+      console.log(user.address);
+      console.log(user.age);
+    </script>
+  </body>
+</html>

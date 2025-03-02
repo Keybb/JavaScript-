@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul class="news">
+      <li>则才夭，贼言书，舟。</li>
+      <li>则才夭，贼言书，舟。</li>
+      <li>则才夭，贼言书，舟。</li>
+      <li>则才夭，贼言书，舟。</li>
+      <li>则才夭，贼言书，舟。</li>
+    </ul>
+    <script>
+      const arr01 = Array.of(100, 200, 300, "kivi", [1, 2, 3]);
+      console.log(arr01);
+      const arr02 = Array.of(12);
+      console.log(arr02); // [12]
+
+      const liBox = document.querySelectorAll(".news li");
+      const arr03 = Array.from(liBox);
+      const arr04 = Array.from("hello world");
+      console.log(arr03);
+      console.log(arr04);
+    </script>
+  </body>
+</html>

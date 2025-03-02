@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Product {
+        // 设置属性
+        name;
+        price;
+        #num;
+
+        // 构造器方法 给属性赋值
+        constructor(name, price) {
+          this.name = name;
+          this.price = Math.max(price, 100);
+          this.#num = Math.random();
+        }
+
+        // 设置方法 以这种形式设置的方法在原型上
+        buy(n) {
+          console.log(`购买了${n}件${this.name}，单价是${this.price}`);
+        }
+        addShopCar() {
+          console.log(`将${this.name}加入购物车`);
+        }
+      }
+
+      // 定义子类
+      class Phone extends Product {
+        color = "red";
+        constructor(name, price, color) {
+          // 将父类的构造器方法调用一次
+          super(name, price);
+          this.color = color;
+        }
+        discount(per) {
+          this.price *= per;
+        }
+        buy(n) {
+          console.log(
+            `购买了${n}件${this.name}，价格是${this.price}，颜色是${this.color}`
+          );
+        }
+      }
+      const p1 = new Phone("xiaomi14", 3999, "green");
+      p1.buy(10);
+      p1.discount(0.7);
+      console.log(p1.price);
+    </script>
+  </body>
+</html>

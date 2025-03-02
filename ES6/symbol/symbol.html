@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 创建symbol类型的数据
+      let s1 = Symbol();
+      console.log(typeof s1); // symbol
+      console.log(s1);
+
+      let s3 = Symbol("hello");
+      let s4 = Symbol("hello");
+      console.log(s3);
+      console.log(s3 === s4); // false
+
+      // 可以作为对象的属性名
+      const m = "address";
+      const user = {
+        [m]: "beijing",
+        [s1]: "shanghai",
+        [s3]: "guangzhou",
+        [Symbol()]: "shenzhen",
+      };
+
+      console.log(user);
+      console.log(user[s1]); // shanghai
+      console.log(user[Symbol()]); // undefined
+    </script>
+  </body>
+</html>
