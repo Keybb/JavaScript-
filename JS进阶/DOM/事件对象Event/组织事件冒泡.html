@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="box">
+      <p>
+        但太怒韩才游是劝论小留气气了韩治己当，护才弟狱太身小下秦哥师有入，杂因胜生是投十光起骨龄二快谓系其，么夫天谓，弟榜至入也娘承着自母重许斯逃位大，战绝承是卑生不不终磊牙逃斗也服骂，落登持、身评小快，说。
+      </p>
+      <p>
+        但太怒韩才游是劝论小留气气了韩治己当，护才弟狱太身小下秦哥师有入，杂因胜生是投十光起骨龄二快谓系其，么夫天谓，弟榜至入也娘承着自母重许斯逃位大，战绝承是卑生不不终磊牙逃斗也服骂，落登持、身评小快，说。
+      </p>
+    </div>
+
+    <script>
+      var box = document.querySelector("#box");
+
+      box.onclick = function () {
+        console.log("box被点击了");
+      };
+
+      box.firstElementChild.onclick = function (event) {
+        console.log("第一个段落被点击了");
+        event.stopPropagation();
+      };
+      box.lastElementChild.onclick = function () {
+        console.log("第二个段落被点击了");
+      };
+    </script>
+  </body>
+</html>

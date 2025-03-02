@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // [] -> Array.prototype -> Object.prototype
+      // Array是子类，Object是父类
+
+      function A() {}
+      function B() {}
+
+      B.prototype = new A();
+      B.prototype.constructor = B;
+    </script>
+  </body>
+</html>

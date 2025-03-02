@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="box">
+      <li>时哥仓辜选并之互是那的才车故，之关普揽。</li>
+      <li>时哥仓辜选并之互是那的才车故，之关普揽。</li>
+      <li>时哥仓辜选并之互是那的才车故，之关普揽。</li>
+      <li>时哥仓辜选并之互是那的才车故，之关普揽。</li>
+      <li>时哥仓辜选并之互是那的才车故，之关普揽。</li>
+    </ul>
+    <script>
+      var box = document.querySelector("#box");
+      var liCollection = box.getElementsByTagName("li");
+
+      var liList = box.querySelectorAll("li");
+
+      console.log(liCollection); // HTMLCollection
+      console.log(liList); // NodeList
+      console.log("");
+      console.log("");
+
+      // 创建新的li添加到ul
+      var liEle = document.createElement("li");
+      liEle.innerHTML = "6我是新增的li";
+      box.appendChild(liEle);
+
+      console.log(liCollection); // HTMLCollection
+      console.log(liList); // NodeList
+    </script>
+  </body>
+</html>

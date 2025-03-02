@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 该对象从未被引用，引用是0, 该对象创建完就成了垃圾
+      [100, 200, 300];
+
+      // {name:'xiaole'}这个对象被 window.age 引用，引用计数+1
+      var age = { name: "xiaole" };
+      // 又被window.address引用 引用计数+1
+      var address = age;
+      // window.age 不再引用 {name:'xiaole'} 引用计数-1
+      age = 200;
+      // 关闭页面的时候，window对象会被销毁. window.age 也不存在了，{name:'xiaole'}的引用计数变为0
+
+      // 创建对象
+      // 小乐被 window.user01 引用，引用计数是 1
+      var user01 = { name: "小乐" };
+      // 老乐被 window.user02 引用，引用计数是 1
+      var user02 = { name: "老乐" };
+
+      // 老乐又被 user01.children 引用,引用计数是 2
+      user01.children = user02;
+      // 小乐被 又被 user02.children 引用，引用计数是 2
+      user02.children = user01;
+
+      // window.user01不再引用 小乐，引用计数 1
+      user01 = 200;
+      // window.user02不再引用 老乐， 引用计数 1
+      user02 = 250;
+    </script>
+  </body>
+</html>

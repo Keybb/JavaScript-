@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 创建定时器是同步任务，回调函数是异步任务，需要满足条件且主线程空闲才能执行
+      setTimeout(function () {
+        console.log("定时器执行");
+      });
+      console.log(100);
+      console.log(200);
+      //输出顺序：100 200 定时器执行
+      // 异步任务在同步任务之后执行
+    </script>
+  </body>
+</html>

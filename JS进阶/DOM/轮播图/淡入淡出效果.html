@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>轮播图</title>
+    <style>
+      ul,
+      ol {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      img {
+        /* 消除底部空白 */
+        display: block;
+      }
+
+      .play-box {
+        position: relative;
+        width: 900px;
+        height: 350px;
+        margin: 100px auto;
+      }
+
+      .images li {
+        /* display: none; */
+        position: absolute;
+        opacity: 0;
+        left: 0;
+        top: 0;
+        width: 900px;
+        height: 350px;
+        transition: opacity 0.5s;
+      }
+
+      .images li.active {
+        /* display: block; */
+        opacity: 1;
+      }
+
+      .btns {
+        position: absolute;
+        display: flex;
+        right: 10px;
+        bottom: 10px;
+      }
+      .btns li {
+        margin-left: 10px;
+        width: 20px;
+        height: 20px;
+        color: #fff;
+        background-color: #000;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 20px;
+        cursor: pointer;
+      }
+      .btns li.active {
+        color: #f60;
+        border-color: #f60;
+      }
+
+      .arrow {
+        position: absolute;
+        width: 40px;
+        height: 100px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-image: url(./images/index.png);
+        cursor: pointer;
+      }
+      .arrow-prev {
+        left: 0;
+      }
+      .arrow-next {
+        right: 0;
+        background-position: -50px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="play-box">
+      <ul class="images">
+        <li class="active">
+          <a href="#">
+            <img src="./images/01.jpg" alt="play" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./images/02.jpg" alt="play" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./images/03.jpg" alt="play" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./images/04.jpg" alt="play" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./images/05.jpg" alt="play" />
+          </a>
+        </li>
+      </ul>
+
+      <!-- 底部圆形按钮 -->
+      <ol class="btns">
+        <li class="active">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+      </ol>
+      <!-- 左右箭头 -->
+      <span class="arrow arrow-prev"></span>
+      <span class="arrow arrow-next"></span>
+    </div>
+
+    <script>
+      (function () {
+        // 获取元素
+        var playBox = document.querySelector(".play-box");
+        var imgItems = playBox.querySelectorAll(".images li");
+        var btnItems = playBox.querySelectorAll(".btns li");
+        var prevArrow = playBox.querySelector(".arrow-prev");
+        var nextArrow = playBox.querySelector(".arrow-next");
+
+        // 记录当前图片的索引
+        var index = 0;
+        // 定时器的时间间隔
+        var duration = 3000;
+
+        // 遍历给每个按钮监听事件
+        btnItems.forEach(function (btnItem, btnIndex) {
+          btnItem.onclick = function () {
+            // index改为当前索引
+            index = btnIndex;
+            setActive();
+          };
+        });
+
+        function setActive() {
+          // 所有按钮都取消选中
+          btnItems.forEach(function (item, index) {
+            item.classList.remove("active");
+            imgItems[index].classList.remove("active");
+          });
+          // 点击改变颜色和图片显示
+          btnItems[index].classList.add("active");
+          imgItems[index].classList.add("active");
+        }
+
+        // 左右箭头
+        prevArrow.onclick = prev;
+
+        nextArrow.onclick = next;
+
+        // 切换下一张图
+        function next() {
+          index++;
+          if (index > btnItems.length - 1) {
+            index = 0;
+          }
+          setActive();
+        }
+
+        // 切换上一张图
+        function prev() {
+          index--;
+          if (index < 0) {
+            index = btnItems.length - 1;
+          }
+          setActive();
+        }
+        // 添加定时器
+        var intervalId = setInterval(next, duration);
+        // 鼠标悬停在图片上停止定时器
+        playBox.onmouseenter = function () {
+          clearInterval(intervalId);
+        };
+        // 鼠标离开图片重新设置定时器
+        playBox.onmouseleave = function () {
+          intervalId = setInterval(next, duration);
+        };
+      })();
+    </script>
+  </body>
+</html>

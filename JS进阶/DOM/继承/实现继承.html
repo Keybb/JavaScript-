@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 定义商品类
+      function Product(price, nums) {
+        // 给实例设置属性
+        this.price = price;
+        this.nums = nums;
+        // 方法
+        this.discount = function (num) {
+          this.price *= num;
+        };
+        this.buy = function () {
+          this.nums -= 1;
+        };
+      }
+
+      // 汽车类
+      function CarProduct(price, nums, speed) {
+        // this.price = price;
+        // this.nums = nums;
+        // 调用Product，call改变Product中this指向，this的值为CarProduct的实例
+        Product.call(this, price, nums);
+        this.speed = speed;
+      }
+      CarProduct.prototype = new Product();
+      CarProduct.prototype.constructor = CarProduct;
+
+      // 设置方法
+      CarProduct.prototype.driver = function () {
+        console.log("这辆车可以被驾驶");
+      };
+
+      // 创建汽车实例 c1 -> CarProduct.prototype -> Product.prototype ->Object.prototype
+      var c1 = new CarProduct(19.8, 45, 100);
+      var c2 = new CarProduct(27.8, 76, 200);
+      console.log(c1);
+      c1.driver();
+      console.log(c2);
+    </script>
+  </body>
+</html>

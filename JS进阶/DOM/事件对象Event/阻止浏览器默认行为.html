@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #box {
+        width: 600px;
+        height: 250px;
+        background-color: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="http://www.atguigu.com">尚硅谷</a>
+
+    <form action="http://baidu.com/s">
+      <input type="text" name="wd" id="" /> <button>搜索</button>
+    </form>
+
+    <div id="box"></div>
+    <div style="height: 2000px"></div>
+
+    <script>
+      var aBox = document.querySelector("a");
+      var formBox = document.querySelector("form");
+      var box = document.querySelector("#box");
+      aBox.onclick = function (event) {
+        alert("超链接被点击了");
+        // 阻止默认行为
+        event.preventDefault();
+      };
+
+      formBox.onsubmit = function (event) {
+        console.log("表单正在被提交");
+        event.preventDefault();
+
+        // return false也可以阻止默认行为，但必须以 on+事件名 这种方式监听
+        // return false;
+      };
+
+      // 阻止系统菜单
+      box.oncontextmenu = function (event) {
+        console.log("右击");
+        event.preventDefault();
+      };
+      // 阻止整个文档的系统菜单
+      document.oncontextmenu = function (event) {
+        console.log("右击");
+        event.preventDefault();
+      };
+
+      // 滚轮事件无法阻止
+      window.onmousewheel = function (event) {
+        // event.preventDefault();
+      };
+    </script>
+  </body>
+</html>

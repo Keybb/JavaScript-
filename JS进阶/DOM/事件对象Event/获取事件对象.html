@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #box {
+        width: 400px;
+        height: 250px;
+        background: #099;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box"></div>
+
+    <script>
+      // 获取元素
+      var box = document.querySelector("#box");
+
+      box.onclick = function (event) {
+        // var event = event || window.event;  // 兼容IE的用法
+        console.log("click", event);
+      };
+
+      box.addEventListener("contextmenu", function (event) {
+        console.log("contextmenu", event);
+      });
+
+      box.onmousedown = bindMove;
+
+      function bindMove(event) {
+        console.log("鼠标移动：", event);
+      }
+    </script>
+  </body>
+</html>

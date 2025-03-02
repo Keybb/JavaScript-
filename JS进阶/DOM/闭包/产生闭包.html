@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // function A() {
+      //   var num01 = 100,
+      //     num02 = 200;
+
+      //   function B() {
+      //     console.log(num01 + num02);
+      //   }
+      //   // 方式一 函数B作为返回值
+      //   return B;
+      // }
+
+      // var fn = A();
+      // fn();
+
+      function A() {
+        var num01 = 100,
+          num02 = 200;
+
+        function B() {
+          console.log(num01 + num02);
+        }
+        // 方式二 函数B赋值给全局对象的属性
+        window.func = B;
+      }
+
+      var fn = A();
+      func();
+    </script>
+  </body>
+</html>
